@@ -5,24 +5,24 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Merging branches and pushing to GitHub
 
 On your working branch:
-1. git add .
-2. git commit -m [comment]
-3. git push origin [branch-name]
+1. `git add .`
+2. `git commit -m [comment]`
+3. `git push origin [branch-name]`
 
 Switch to master branch with git checkout master:
-1. git pull [remote] [branch-name]
+1. `git pull [remote] [branch-name]`
 2. resolve all the conflicts
-3. git add .
-4. git commit -m 'Comments'
-5. git push origin master
+3. `git add .`
+4. `git commit -m "Comments"`
+5. `git push origin master`
 
 ## Quickstart for Deploying to Heroku
 
 Heroku CLI Method (preferred): 
-1. heroku login
-2. git add .
-3. git commit -m "message"
-4. git push heroku master
+1. `heroku login`
+2. `git add .`
+3. `git commit -m "message"`
+4. `git push heroku master`
 5. Previous step only pushes to Heroku to be deployed. Make sure to `git push origin <branch>` your changes as well. 
 
 Git Method:
