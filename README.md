@@ -25,7 +25,7 @@ Heroku CLI Method (preferred):
 4. `git push heroku master`
 5. Previous step only pushes to Heroku to be deployed. Make sure to `git push origin <branch>` your changes as well. 
 
-Git Method:
+GitHub Method:
 1. Git push all your new changes to whatever branch you want to deploy.
 2. Go to the Heroku website and then go to the 'Deploy' tab for the haveyouheardproj project. 
 3. Connect to Github.
