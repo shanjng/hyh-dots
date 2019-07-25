@@ -3,11 +3,13 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
 
 ## Merging branches and pushing to GitHub
+
 On your working branch:
 1. git add .
 2. git commit -m [comment]
 3. git push origin [branch-name]
-Switch to master branch with git checkout master
+
+Switch to master branch with git checkout master:
 1. git pull [remote] [branch-name]
 2. resolve all the conflicts
 3. git add .
@@ -19,7 +21,7 @@ Switch to master branch with git checkout master
 Heroku CLI Method (preferred): 
 1. heroku login
 2. git add .
-3. git add commit -m "message"
+3. git commit -m "message"
 4. git push heroku master
 
 Git Method:
