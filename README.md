@@ -16,6 +16,13 @@ Switch to master branch with git checkout master
 
 ## Quickstart for Deploying to Heroku
 
+Heroku CLI Method (preferred): 
+1. heroku login
+2. git add .
+3. git add commit -m "message"
+4. git push heroku master
+
+Git Method:
 1. Git push all your new changes to whatever branch you want to deploy.
 2. Go to the Heroku website and then go to the 'Deploy' tab for the haveyouheardproj project. 
 3. Connect to Github.
