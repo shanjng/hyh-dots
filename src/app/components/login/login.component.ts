@@ -55,10 +55,4 @@ export class LoginComponent implements OnInit {
   register(){
     this.router.navigate(['register']);
   }
-
-  getAll() {
-    this.userService.getAll()
-    .then(res => console.log("Success with Login!: ", res))
-    .catch(err => console.log("Failed Login: ", err))
-  }
 }
