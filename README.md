@@ -23,6 +23,7 @@ Heroku CLI Method (preferred):
 2. git add .
 3. git commit -m "message"
 4. git push heroku master
+5. Previous step only pushes to Heroku to be deployed. Make sure to `git push origin <branch>` your changes as well. 
 
 Git Method:
 1. Git push all your new changes to whatever branch you want to deploy.
