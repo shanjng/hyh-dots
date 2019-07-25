@@ -10,6 +10,9 @@ import { FormsModule} from '@angular/forms';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { AvatarModule } from 'ng2-avatar';
 
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +25,8 @@ import { AvatarModule } from 'ng2-avatar';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule, 
+    HttpModule, 
     FormsModule,
     AvatarModule.forRoot(), 
 

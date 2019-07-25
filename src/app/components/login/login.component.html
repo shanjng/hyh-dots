@@ -12,21 +12,24 @@
           <!-- <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
           <h1 class="rainbow signIn" style="font-size:200%, " align="center">Sign In</h1>
           <div align="center">
-              <input type="text"  class="inputs" placeholder="Email"  ><br>
-              <input type="text"  class="inputs" placeholder="Password" type="password" ><br> 
+              <input type="text"  class="inputs" placeholder="Email" name="email" [(ngModel)]="authUser.email" ><br>
+              <input type="text"  class="inputs" placeholder="Password" type="password" name="password" [(ngModel)]="authUser.password"><br> 
 
           </div>
 
           <div class="checkbox mb-3" align="center">
             <br>
             <label>
-              <button class="btn btn-lg btn-primary btn-block" type="submit" ><b>Welcome Back</b></button>
+              <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="login()"><b>Welcome Back</b></button>
               <br><br><b style="font-family: 'Montserrat', sans-serif;
               ">Don't have an account? </b><a (click)=register()>  <b>   Sign up</b></a>
 
             </label>
           </div >
-
+            <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="getAll()"><b>Get Users!</b></button>
+          <div>
+            
+          </div>
         </form>
   </body>
 

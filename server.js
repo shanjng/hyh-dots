@@ -8,7 +8,8 @@ const favicon = require('express-favicon');
 const app = express();
 app.use(bodyParser.json());
 
-app.use(favicon(__dirname + '/dist/hyh1/favicon.ico'));
+// deals with favicon error
+app.use(favicon(__dirname + '/dist/hyhproj/favicon.ico'));
 
 // API ENDPOINTS BELOW
 // Generic error handler used by all endpoints.
@@ -18,14 +19,13 @@ function handleError(res, reason, message, code) {
 }  
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist/hyh1'));
+app.use(express.static(__dirname + '/dist/hyhproj'));
 
 app.get('/', function(req,res) { 
-    res.sendFile(path.join(__dirname + '/dist/hyh1/index.html'));
+    res.sendFile(path.join(__dirname + '/dist/hyhproj/index.html'));
 });
-app.use("/api/auth", require("./src/app/api/routes/auth-routes"));
 
 // Start the app by listening on the default Heroku port
-const PORT = process.env.PORT || 4200;
+const PORT = process.env.PORT || 8080;
 
 app.listen(PORT,()=>console.log(`Server running on port ${PORT}`));

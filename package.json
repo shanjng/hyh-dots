@@ -1,5 +1,5 @@
 {
-  "name": "hyh1",
+  "name": "hyhproj",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "~8.1.0",
     "@angular/router": "~8.1.0",
     "angular-dropdown-component": "^1.0.8",
+    "boostrap": "^2.0.0",
     "express": "^4.17.1",
     "express-favicon": "^2.0.1",
     "fs": "0.0.1-security",
