@@ -3,9 +3,12 @@ const express = require('express');
 const path = require('path');
 var bodyParser = require("body-parser");
 const mysql = require("mysql");
+const favicon = require('express-favicon');
 
 const app = express();
 app.use(bodyParser.json());
+
+app.use(favicon(__dirname + '/dist/hyh1/favicon.ico'));
 
 // API ENDPOINTS BELOW
 // Generic error handler used by all endpoints.
