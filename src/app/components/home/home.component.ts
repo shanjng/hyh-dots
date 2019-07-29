@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,16 +10,28 @@ import {Router} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+
+  navItems = [
+    {name:"Browse", path: "nav/browse"},
+    {name:"Login", path: "nav/login"},
+    {name:"Sign Up", path: "nav/register"}
+  ]
+
+  constructor(private router: Router) {
+
+   }
 
   ngOnInit() {
+    localStorage.setItem('navBar', JSON.stringify(this.navItems));
   }
 
   login(){
-    this.router.navigate(['login']);
+
+    this.router.navigate(['nav/login']);
   }
   register(){
-    this.router.navigate(['register']);
+ 
+    this.router.navigate(['nav/register']);
   }
 
 }

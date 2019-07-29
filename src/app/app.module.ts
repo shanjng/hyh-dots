@@ -9,9 +9,12 @@ import { RegisterComponent } from '../app/components/register/register.component
 import { FormsModule} from '@angular/forms';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { AvatarModule } from 'ng2-avatar';
-
+import {BrowseComponent} from './components/browse/browse.component'
+import {AuthorizationComponent} from './components/authorization/authorization.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { HttpModule } from '@angular/http';
     LoginComponent,
     HomeComponent,
     RegisterComponent,
-    NavBarComponent
+    NavBarComponent,
+    BrowseComponent,
+    AuthorizationComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,9 @@ import { HttpModule } from '@angular/http';
     HttpClientModule, 
     HttpModule, 
     FormsModule,
-    AvatarModule.forRoot(), 
+    AvatarModule.forRoot(),
+    MatToolbarModule,
+    MatCardModule
 
   ],
   providers: [],
