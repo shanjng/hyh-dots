@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
       const testId = localStorage.getItem('userid');
       console.log(testId);
 
-      this.router.navigate(['home'], {
+      this.router.navigate(['register'], {
         queryParams: {
           // puts id (res-ponse) in the URL ?user=userid
           user: res.id
