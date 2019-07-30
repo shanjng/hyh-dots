@@ -6,7 +6,6 @@
     text-emphasis: 50em;
     color: rgb(28, 158, 250);
     font-family: 'Bungee Outline', cursive;
-  
 
     // background-color: black;
   
@@ -15,9 +14,9 @@
     // color:transparent;
     // -webkit-background-clip: text;
     // background-clip: text;
+}
 
-  }
-  button{
+button{
     margin-right: 8px;
     font-size: 1em;
      border-radius: 5px;
@@ -28,28 +27,28 @@
     color: rgb(28, 158, 250);
     font-family: 'Montserrat', sans-serif;
 
-  }
-  a{
+}
+a{
     margin-right: 8px;
     font-size: 1em;
     font-family: 'Montserrat', sans-serif;
     border: none;
     color: rgb(28, 158, 250);
-  }
-  a:hover {
+}
+a:hover {
       text-decoration:underline #92A0AA;
 }
-  button:hover{
+button:hover{
     // background-color: rgb(28, 158, 250);
     border: none;
     text-decoration:underline #92A0AA;
   
-  }
-  button:focus {
+}
+button:focus {
     outline: none;
     border: 0;
- }
-  .inputs{
+}
+.inputs{
     border-radius: 5px;
     margin: 5px;
     text-align: left;
@@ -58,25 +57,22 @@
     border: none;
     background-color:lightsteelblue;
 
-
-   }
-   input:focus{
-    outline: none;
-    border: 0;
-
-   }
-   .form-signin{
+  }
+input:focus{
+  outline: none;
+  border: 0;
+}
+.form-signin{
     position: absolute;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-   }
-   .signIn{
+}
+.signIn{
     font-size: 500%;
-
-  }
-  .remember{
+}
+.remember{
       font-size:100%;
-  }
+}
 

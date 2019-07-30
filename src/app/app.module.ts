@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from './angular-material.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,8 @@ import {MatCardModule} from '@angular/material/card';
     RegisterComponent,
     NavBarComponent,
     BrowseComponent,
-    AuthorizationComponent
+    AuthorizationComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -35,10 +39,12 @@ import {MatCardModule} from '@angular/material/card';
     FormsModule,
     AvatarModule.forRoot(),
     MatToolbarModule,
-    MatCardModule
-
+    MatCardModule,
+    BrowserAnimationsModule,
+    AngularMaterialModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

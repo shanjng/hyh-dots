@@ -6,6 +6,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { BrowseComponent } from './components/browse/browse.component';
 import { AuthorizationComponent } from './components/authorization/authorization.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent},
     { path: 'register', component: RegisterComponent},
     { path: 'browse', component: BrowseComponent},
+    { path: 'myDashboard', component: DashboardComponent},
   ]},
   { path: 'authorize', component: AuthorizationComponent},
 ];
