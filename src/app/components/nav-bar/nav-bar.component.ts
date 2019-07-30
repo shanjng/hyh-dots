@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {MatSidenavModule} from '@angular/material';
+import {NavService} from '../../../../../src/app/services/nav.service';
+import {NavBar} from '../../../../../src/app/nav-bar';;
+
+
 
 
 @Component({
@@ -8,17 +13,24 @@ import {Router} from '@angular/router';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
+   navItems :Array<any>;
 
-  constructor(private router: Router) { }
+
+  constructor(private router: Router) {
+
+   }
 
   ngOnInit() {
-    this.router.navigate(['home']);
+    this.navItems= JSON.parse(localStorage.getItem('navBar'));
+
+    
   }
-  login(){
-    this.router.navigate(['login']);
+
+  navTo(nav){
+    this.router.navigate([nav.path]);
+
+
   }
-  register(){
-    this.router.navigate(['register']);
-  }
+
 
 }
