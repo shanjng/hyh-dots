@@ -25,6 +25,10 @@ export class HomeComponent implements OnInit {
     localStorage.setItem('navBar', JSON.stringify(this.navItems));
   }
 
+  browse()
+{
+  this.router.navigate(['nav/browse']);
+}
   login(){
 
     this.router.navigate(['nav/login']);
