@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {NavBar} from '../../nav-bar';
+import {MatSidenavModule} from '@angular/material';
+import {NavService} from '../../services/nav.service';
+import {NavBar} from '../../nav-bar';;
 
 @Component({
   selector: 'app-nav-bar',

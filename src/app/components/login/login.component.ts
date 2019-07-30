@@ -13,16 +13,7 @@ import { User } from '../../models/user.model'
 export class LoginComponent implements OnInit {
   public authUser = new User();
 
-  public email: string;
-  public password: string;
   nav= new NavBar();
-  navItems = [
-    {name: "  Browse  ", path:'nav/Browse'},
-    {name: "  myDashboard  ", path:'nav/myDashboard'},
-    {name: "  Help  ", path:'nav/help'},
-    {name: "  Logout  ", path:'nav/logout'}
-  ]   
-
 
   constructor(private router: Router, private navService: NavService,    private authService: AuthService,
     private userService: UserService,) { 
@@ -54,11 +45,6 @@ export class LoginComponent implements OnInit {
     }).catch(err => {
       console.log("Error: ", err)
     })
-    
-   
-
-
-    
   }
 
 }

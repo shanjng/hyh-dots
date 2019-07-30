@@ -18,6 +18,7 @@ import {MatCardModule} from '@angular/material/card';
 import { AboutComponent } from './components/about/about.component';
 import { HelpComponent } from './components/help/help.component';
 import { FaqComponent } from './components/faq/faq.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FaqComponent } from './components/faq/faq.component';
     FormsModule,
     AvatarModule.forRoot(),
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    FlexLayoutModule
 
   ],
   providers: [],

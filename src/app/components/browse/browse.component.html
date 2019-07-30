@@ -1,1 +1,12 @@
-<p>browse works!</p>
+    <ul *ngFor = 'let user of users'>
+        <li>
+            <img src={{user.profile_image_url}}>
+        </li>
+        <li>screen name: {{user.screen_name}}</li>
+        <li>location: {{user.location}}</li>
+        <li>followers: {{user.followers_count}}</li>
+        <li>friends: {{user.friends_count}}</li>
+
+     </ul>
+
+
