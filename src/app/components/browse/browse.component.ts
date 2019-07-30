@@ -14,15 +14,14 @@ export class BrowseComponent implements OnInit {
       {name: "   myDashboard    ", path:'nav/myDashboard'},
       {name: "   Help   ", path:'nav/help'},
       {name: "   Logout   ", path:'nav/logout'}
-    ] 
-
+    ]
   }
 
   ngOnInit() {
-    if (localStorage.getItem('run')=='true'){
-      localStorage.setItem('navBar', JSON.stringify(this.navItems));
-      window.location.reload();
-      localStorage.setItem('run','false');
-    }
+    // if (localStorage.getItem('run')=='true'){
+    //   localStorage.setItem('navBar', JSON.stringify(this.navItems));
+    //   window.location.reload();
+    //   localStorage.setItem('run','false');
+    // }
   }
 }
