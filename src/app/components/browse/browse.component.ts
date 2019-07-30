@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NavService} from '../../services/nav.service';
+import { NavBar } from '../../nav-bar'
 
 @Component({
   selector: 'app-browse',
@@ -7,21 +8,11 @@ import {NavService} from '../../services/nav.service';
   styleUrls: ['./browse.component.scss']
 })
 export class BrowseComponent implements OnInit {
-  navItems: Array<any>
+  public navBar = new NavBar()
+
   constructor(private navService: NavService) {
-    this.navItems=  [
-      {name: "   Browse   ", path:'nav/Browse'},
-      {name: "   myDashboard    ", path:'nav/myDashboard'},
-      {name: "   Help   ", path:'nav/help'},
-      {name: "   Logout   ", path:'nav/logout'}
-    ]
   }
 
   ngOnInit() {
-    // if (localStorage.getItem('run')=='true'){
-    //   localStorage.setItem('navBar', JSON.stringify(this.navItems));
-    //   window.location.reload();
-    //   localStorage.setItem('run','false');
-    // }
   }
 }
