@@ -1,5 +1,5 @@
 export class NavBar {
-    private navItems: Array<any> =[
+    public navItems: Array<any> =[
         {name: "What We Do", path: "/about"},
         {name:"Browse", path: "/browse"},
         {name:"Login", path: "/login"},

@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
   }
 
   register(){
-    this.router.navigate(['nav/register']);
+    this.router.navigate(['/register']);
   }
 
    login(){
@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
       const testId = localStorage.getItem('userid');
       console.log(testId);
 
-      this.router.navigate(['nav/browse'], {
+      this.router.navigate(['/browse'], {
         queryParams: {
           // puts id (res-ponse) in the URL ?user=userid
           user: res.id
