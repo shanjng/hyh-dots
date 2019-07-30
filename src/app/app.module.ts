@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +19,9 @@ import { AboutComponent } from './components/about/about.component';
 import { HelpComponent } from './components/help/help.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from './angular-material.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AuthorizationComponent,
     AboutComponent,
     HelpComponent,
-    FaqComponent
+    FaqComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -43,10 +47,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AvatarModule.forRoot(),
     MatToolbarModule,
     MatCardModule,
-    FlexLayoutModule
-
+    FlexLayoutModule,
+    BrowserAnimationsModule,
+    AngularMaterialModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
