@@ -4,12 +4,13 @@
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Bungee+Outline|Montserrat&display=swap" rel="stylesheet">
     <mat-toolbar>
             <span>
-                <img class="logo" src='assets/cornerLogo.JPG'/>
+                <a href="">
+                    <img class="logo" src='assets/cornerLogo.JPG'/>
+                </a>
             </span>
             <span class="example-spacer"></span>
-            <div  align="end" class="right"  *ngFor = 'let nav of navItems'>
+            <div  align="end" class="right"  *ngFor = 'let nav of navBar.navItems'>
                 <button  (click)='navTo(nav)' >{{nav.name}}</button>   
-
             </div>
     </mat-toolbar>
 </header>

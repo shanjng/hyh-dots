@@ -24,10 +24,5 @@ export class BrowseComponent implements OnInit {
       window.location.reload();
       localStorage.setItem('run','false');
     }
-
-
-
   }
-
-
 }

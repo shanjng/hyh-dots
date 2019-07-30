@@ -6,15 +6,21 @@ import { RegisterComponent } from './components/register/register.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { BrowseComponent } from './components/browse/browse.component';
 import { AuthorizationComponent } from './components/authorization/authorization.component';
+import { AboutComponent } from './components/about/about.component';
+import { HelpComponent } from './components/help/help.component';
+import { FaqComponent } from './components/faq/faq.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent},
-  { path: 'nav', component: NavBarComponent, children:[
-    { path: 'login', component: LoginComponent},
-    { path: 'register', component: RegisterComponent},
-    { path: 'browse', component: BrowseComponent},
-  ]},
+  { path: '', component: NavBarComponent, children:[
+      { path: '', component: HomeComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegisterComponent },
+      { path: 'browse', component: BrowseComponent },
+      { path: 'about', component: AboutComponent },
+      { path: 'help', component: HelpComponent },
+      {path: 'faq', component: FaqComponent}
+    ]},
   { path: 'authorize', component: AuthorizationComponent},
 ];
 

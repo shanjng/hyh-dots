@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
+import { AboutComponent } from './components/about/about.component';
+import { HelpComponent } from './components/help/help.component';
+import { FaqComponent } from './components/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import {MatCardModule} from '@angular/material/card';
     RegisterComponent,
     NavBarComponent,
     BrowseComponent,
-    AuthorizationComponent
+    AuthorizationComponent,
+    AboutComponent,
+    HelpComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,

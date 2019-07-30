@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {MatSidenavModule} from '@angular/material';
-import {NavService} from '../../services/nav.service';
 import {NavBar} from '../../nav-bar';
-
-
-
 
 @Component({
   selector: 'app-nav-bar',
@@ -13,24 +8,15 @@ import {NavBar} from '../../nav-bar';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-   navItems :Array<any>;
+  public navBar = new NavBar()
 
+  constructor(
+    private router: Router
+    ) { }
 
-  constructor(private router: Router) {
-
-   }
-
-  ngOnInit() {
-    this.navItems= JSON.parse(localStorage.getItem('navBar'));
-
-    
-  }
+  ngOnInit() { }
 
   navTo(nav){
     this.router.navigate([nav.path]);
-
-
   }
-
-
 }

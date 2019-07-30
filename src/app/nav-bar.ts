@@ -1,8 +1,10 @@
 export class NavBar {
     private navItems: Array<any> =[
-        {name:"Browse", path: "nav/browse"},
-        {name:"Login", path: "nav/login"},
-        {name:"Sign Up", path: "nav/register"}
+        {name: "What We Do", path: "/about"},
+        {name:"Browse", path: "/browse"},
+        {name:"Login", path: "/login"},
+        {name:"Sign Up", path: "/register"},
+        {name: "Help", path: "/help"}
       ];
     set nav(list){
         this.navItems=list;
