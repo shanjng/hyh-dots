@@ -7,10 +7,10 @@ import {Router} from '@angular/router';
 })
 export class NavService {
   navItems: Array<any> =  [
-    {name: "  Browse  ", path:'nav/Browse'},
-    {name: "  myDashboard  ", path:'nav/myDashboard'},
-    {name: "  Help  ", path:'nav/help'},
-    {name: "  Logout  ", path:'nav/logout'}
+    {name: "  Browse  ", path:'/browse'},
+    {name: "  myDashboard  ", path:'/myDashboard'},
+    {name: "  Help  ", path:'/help'},
+    {name: "  Logout  ", path:'/logout'}
   ];
 
 

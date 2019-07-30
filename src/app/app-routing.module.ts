@@ -11,7 +11,6 @@ import { AboutComponent } from './components/about/about.component';
 import { HelpComponent } from './components/help/help.component';
 import { FaqComponent } from './components/faq/faq.component';
 
-
 const routes: Routes = [
   { path: '', component: NavBarComponent, children:[
       { path: '', component: HomeComponent },

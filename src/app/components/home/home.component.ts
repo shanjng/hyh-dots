@@ -12,9 +12,9 @@ export class HomeComponent implements OnInit {
 
 
   navItems = [
-    {name:"Browse", path: "nav/browse"},
-    {name:"Login", path: "nav/login"},
-    {name:"Sign Up", path: "nav/register"}
+    {name:"Browse", path: "/browse"},
+    {name:"Login", path: "/login"},
+    {name:"Sign Up", path: "/register"}
   ]
 
   constructor(private router: Router) {

@@ -4,7 +4,8 @@ export class NavBar {
         {name:"Browse", path: "/browse"},
         {name:"Login", path: "/login"},
         {name:"Sign Up", path: "/register"},
-        {name: "Help", path: "/help"}
+        {name: "Dashboard", path: "/myDashboard"},
+        {name: "Help", path: "/help"},
       ];
     set nav(list){
         this.navItems=list;
