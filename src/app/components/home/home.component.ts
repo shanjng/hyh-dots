@@ -33,5 +33,8 @@ export class HomeComponent implements OnInit {
  
     this.router.navigate(['nav/register']);
   }
+  browse(){
+    this.router.navigate(['nav/browse']);
+  }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {NavService} from '../../../../../src/app/services/nav.service';
+import {NavService} from '../../services/nav.service';
+import {UserService} from '../../services/user.service';
 
 @Component({
   selector: 'app-browse',
@@ -7,8 +8,9 @@ import {NavService} from '../../../../../src/app/services/nav.service';
   styleUrls: ['./browse.component.scss']
 })
 export class BrowseComponent implements OnInit {
+  users: any;
   navItems: Array<any>
-  constructor(private navService: NavService) {
+  constructor(private navService: NavService, private userService: UserService) {
     this.navItems=  [
       {name: "   Browse   ", path:'nav/Browse'},
       {name: "   myDashboard    ", path:'nav/myDashboard'},
@@ -24,10 +26,17 @@ export class BrowseComponent implements OnInit {
       window.location.reload();
       localStorage.setItem('run','false');
     }
+      this.userService.getUsers().then(res=>{
+        console.log(res);
+        this.users=res;
+      }).catch(err=>{
+        console.log(err);
+      })
+
+  }
 
 
 
   }
 
 
-}

@@ -8,26 +8,41 @@
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 
   </head> 
-  <body>
-      <mat-card  class="form-signin2" align="center">
-          <h1 class="signIn" style="font-size:200% ; color:rgb(48, 96, 226)">Sign In</h1>
-          <div >
-              <input type="text"  class="inputs" placeholder="Email" [(ngModel)]="email" name="email"><br>
-              <input type="text"  class="inputs" placeholder="Password" type="password" [(ngModel)]="password" name="password"><br> 
+  <mat-card>
+      <h1 class="signIn" style="font-size:200% ;">Sign In</h1>
+     <div class="row">
 
+          <div class="column">
+            <mat-card style="margin-left:150px; margin-right:0 " >               
+             <div >
+                    <b>Email:</b> <input type="text"  class="inputs" placeholder="Email" [(ngModel)]="authUser.email" name="email"><br>
+                    <b>Password:</b> <input type="text"  class="inputs" placeholder="Password" type="password" [(ngModel)]="authUser.password" name="password"><br>
+                    <label>
+                        <button class="inputs-button" type="submit"  (click)=login()><b>Login</b></button>
+                        <br><br><b style="font-family: 'Montserrat', sans-serif;
+                        ">Don't have an account? </b><a (click)= register()>  <b>   Sign up</b></a>
+          
+                      </label> 
+      
+              </div>
+              </mat-card>
+             </div>
+      
+        <div class="column">
+          <mat-card>
+             <img class="background" src = 'assets/background.JPG' >
+          </mat-card>
+        </div>
+        <div class="column">
+            <mat-card class="google">
+               <button class="google-button"><b>Sign in with Google</b></button>
+            </mat-card>
           </div>
 
-          <div class="checkbox mb-3" align="center">
-            <br>
-            <label>
-              <button class="btn btn-lg btn-primary btn-block" type="submit"  (click)=login()><b>Welcome Back</b></button>
-              <br><br><b style="font-family: 'Montserrat', sans-serif;
-              ">Don't have an account? </b><a (click)= register()>  <b>   Sign up</b></a>
+      </div>
 
-            </label>
-          </div >
 
-        </mat-card>
-  </body>
+  </mat-card>
+     
 
 </html>

@@ -15,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import {MatCardModule} from '@angular/material/card';
     FormsModule,
     AvatarModule.forRoot(),
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    FlexLayoutModule
 
   ],
   providers: [],

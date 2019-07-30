@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {MatSidenavModule} from '@angular/material';
-import {NavService} from '../../../../../src/app/services/nav.service';
-import {NavBar} from '../../../../../src/app/nav-bar';;
+import {NavService} from '../../services/nav.service';
+import {NavBar} from '../../nav-bar';;
 
 
 
