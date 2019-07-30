@@ -1,1 +1,17 @@
-<p>browse works!</p>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<li>
+  <ul class="users">
+    <li *ngFor="let User of users" (click)="onSelect(User)">
+      <div class="card">
+        <img src="{{ User.imgUrl }}" alt="{{ User.name }}" style="width:100%" />
+        <h1>{{ User.name }} {{ User.surname }}</h1>
+        <p class="title">CEO & Founder, Example</p>
+        <p>Harvard University</p>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+      </div>
+    </li>
+  </ul>
+</li>
