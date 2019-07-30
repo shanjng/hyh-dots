@@ -21,9 +21,6 @@ export class LoginComponent implements OnInit {
     {name: "  myDashboard  ", path:'nav/myDashboard'},
     {name: "  Help  ", path:'nav/help'},
     {name: "  Logout  ", path:'nav/logout'}
-
-
-
   ]   
 
 
