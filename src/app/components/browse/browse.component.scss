@@ -6,16 +6,28 @@ ul {
   
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+    max-width: 250px;
     margin: 20px;
     text-align: center;
+    
   }
-  
+  .imgBox{
+    max-height: 150px;
+  }
   .title {
     color: grey;
-    font-size: 18px;
+    font-size: 15px;
   }
-  
+  .name{
+    font-size: 20px;
+  }
+  .desc{
+    font-size: 13px;
+  }
+  .stats{
+    font-size: 15px;
+  }
+
   button {
     border: none;
     outline: 0;
@@ -40,3 +52,9 @@ ul {
     opacity: 0.7;
   }
   
+  img {
+    border-radius: 50%;
+    height: 95%;
+    width: 70%;
+    margin-top: 5px;
+  }
