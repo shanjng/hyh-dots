@@ -28,7 +28,7 @@ export class UserService {
   getUsers(){
     return new Promise((resolve, reject) => {
       const headers = new HttpHeaders();
-      this.http.get('http://localhost:8300/users/users', {headers})
+      this.http.get('http://hyhapi.herokuapp.com/api/user/get', {headers})
       .subscribe(response =>{
         //localStorage.setItem('userid', response);
         console.log(response);

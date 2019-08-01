@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {NavService} from '../../services/nav.service';
 import { NavBar } from '../../nav-bar'
 import {UserService} from '../../services/user.service';
+import {User} from '../../models/user.model'
 
 @Component({
   selector: 'app-browse',
@@ -11,6 +12,12 @@ import {UserService} from '../../services/user.service';
 export class BrowseComponent implements OnInit {
   public navBar = new NavBar()
   users: any;
+
+  selectedUser: User;
+  onSelect(user: User): void {
+    this.selectedUser = user;
+  }
+
   constructor(private navService: NavService, private userService: UserService) {}
 
   ngOnInit() {

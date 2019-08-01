@@ -18,7 +18,7 @@ import {MatCardModule} from '@angular/material/card';
 import { AboutComponent } from './components/about/about.component';
 import { HelpComponent } from './components/help/help.component';
 import { FaqComponent } from './components/faq/faq.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
@@ -47,7 +47,7 @@ import { AngularMaterialModule } from './angular-material.module';
     AvatarModule.forRoot(),
     MatToolbarModule,
     MatCardModule,
-    FlexLayoutModule,
+    
     BrowserAnimationsModule,
     AngularMaterialModule
   ],

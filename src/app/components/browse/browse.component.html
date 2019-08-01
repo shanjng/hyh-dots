@@ -1,12 +1,22 @@
-    <ul *ngFor = 'let user of users'>
-        <li>
-            <img src={{user.profile_image_url}}>
-        </li>
-        <li>screen name: {{user.screen_name}}</li>
-        <li>location: {{user.location}}</li>
-        <li>followers: {{user.followers_count}}</li>
-        <li>friends: {{user.friends_count}}</li>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
 
-     </ul>
+
+    <ul class="users">
+      <li *ngFor="let User of users" (click)="onSelect(User)">
+        <div class="card">
+          <img src={{User.profile_image_url}} alt={{User.screen_name}} style="width:100%" />
+          <h1>{{User.screen_name}}</h1>
+          <p class="title">{{User.location}} </p>
+          <p class="title">{{User.followers_count}}</p>
+          <p>{{User.friends_count}}</p>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+      </li>
+    </ul>
+
+
 
 
