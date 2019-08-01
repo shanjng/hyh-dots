@@ -1,12 +1,12 @@
-    <ul *ngFor = 'let user of users'>
-        <li>
-            <img src={{user.profile_image_url}}>
-        </li>
-        <li>screen name: {{user.screen_name}}</li>
-        <li>location: {{user.location}}</li>
-        <li>followers: {{user.followers_count}}</li>
-        <li>friends: {{user.friends_count}}</li>
+<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 
-     </ul>
+    <mat-grid-list cols="4" rowHeight="2:1" >
+            <mat-grid-tile *ngFor="let user of users" class="card">
+                <mat-card >
+                    <img mat-card-avatar src={{user.profile_image_url}} align="center"><br>
+                    <mat-card-title>{{user.name}}</mat-card-title>
+                    
+                    </mat-card> 
+            </mat-grid-tile>
 
-
+          </mat-grid-list>

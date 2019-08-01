@@ -12,9 +12,12 @@ export class HomeComponent implements OnInit {
 
 
   navItems = [
+    {name:"What We Do", path: "nav/browse"},
     {name:"Browse", path: "nav/browse"},
     {name:"Login", path: "nav/login"},
-    {name:"Sign Up", path: "nav/register"}
+    {name:"Sign Up", path: "nav/register"},
+    {name:"Browse", path: "nav/browse"},
+
   ]
 
   constructor(private router: Router) {
@@ -37,8 +40,6 @@ export class HomeComponent implements OnInit {
  
     this.router.navigate(['nav/register']);
   }
-  browse(){
-    this.router.navigate(['nav/browse']);
-  }
+
 
 }

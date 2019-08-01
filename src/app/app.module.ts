@@ -16,6 +16,8 @@ import { HttpModule } from '@angular/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 
 @NgModule({
@@ -38,7 +40,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AvatarModule.forRoot(),
     MatToolbarModule,
     MatCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatGridListModule
 
   ],
   providers: [],
