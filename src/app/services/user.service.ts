@@ -41,6 +41,26 @@ export class UserService {
       );
 
     });
+  }
+  updateUser(user) {
+    return new Promise((resolve, reject) => {
+      this.http
+        .patch(`http://localhost:5000/api/user/edit/`, user)
+        .subscribe((response)=>{
+          resolve(response)
+        })
+    })
+  }
 
-}
+  getById(id) {
+    return new Promise((resolve, reject)=> {
+      this.http.get('http://localhost:5000' + '/api/user/' + id)
+      .subscribe(
+        (response: any)=>{
+          resolve(response)
+        },
+        (err) => reject(err)
+      )
+    })
+  }
 }

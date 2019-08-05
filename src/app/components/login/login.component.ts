@@ -50,4 +50,19 @@ export class LoginComponent implements OnInit {
     })
   }
 
+    // localStorage.setItem('run','true');
+    //   this.authService.login(this.authUser).then((res: User) => {
+
+    //     const testId = localStorage.getItem('userid');
+    //     console.log(testId);
+    //   this.router.navigate(['/browse']);
+    //       // queryParams: {
+    //       //   // puts id (res-ponse) in the URL ?user=userid
+    //       //   user: res.id
+    //       //  }
+    //     })
+    //   .catch(err => {
+    //     console.log("Error: ", err)
+    //   })
+
 }
