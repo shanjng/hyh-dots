@@ -14,6 +14,7 @@ export class BrowseComponent implements OnInit {
   public navBar = new NavBar();
   //public twitterUser = new TwitterUser();
   users: any;
+  filters: any[];
 
   selectedUser: TwitterUser;
   onSelect(user: TwitterUser): void {
@@ -30,7 +31,15 @@ export class BrowseComponent implements OnInit {
     private navService: NavService,
     private userService: UserService,
     private router: Router
-  ) {}
+  ) {
+
+    this.filters = [
+      {
+        topic: "fitness",
+        count: 10000
+      }
+    ]
+  }
 
   ngOnInit() {
     if (localStorage.getItem("nav") === "true") {
@@ -44,7 +53,7 @@ export class BrowseComponent implements OnInit {
         });
     }
     this.userService
-      .getUsers()
+      .getUsers(this.filters[0])
       .then(res => {
         console.log(res);
         this.users = res;
