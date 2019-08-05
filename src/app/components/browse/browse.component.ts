@@ -16,7 +16,8 @@ export class BrowseComponent implements OnInit {
   selectedUser: TwitterUser;
   onSelect(user: TwitterUser): void {
     this.selectedUser = user;
-    localStorage.setItem("TwitterUser", this.selectedUser.id_str);  }
+    localStorage.setItem("TwitterUser",JSON.stringify(this.selectedUser));
+  }
 
   constructor(
     private navService: NavService,
