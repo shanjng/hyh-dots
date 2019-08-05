@@ -17,12 +17,12 @@ export class BrowseComponent implements OnInit {
   filters: any[];
   selectedUser: TwitterUser;
 
-  onSelect(user: TwitterUser): void {
+ async onSelect(user: TwitterUser): Promise<void> {
 
     this.selectedUser = user;
 
 
-    localStorage.setItem("twitterUser",JSON.stringify(this.selectedUser));
+    await localStorage.setItem("twitterUser",JSON.stringify(this.selectedUser));
     
     this.router.navigate(['nav/myDashboard'])
   }
