@@ -10,7 +10,7 @@ export class NavService {
     {name: "  Browse  ", path:'nav/browse'},
     {name: "  myDashboard  ", path:'nav/myDashboard'},
     {name: "  Help  ", path:'nav/help'},
-    {name: "  Logout  ", path:'nav/logout'}
+    {name: "  Logout  ", path:''}
   ];
 
 
