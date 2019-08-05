@@ -1,4 +1,24 @@
 <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+<!--TODO update user endpoints-->
+    <ul class="users">
+      <li *ngFor="let User of users" (click)="onSelect(User)">
+        <div class="card">
+          <img src={{User.profile_image_url}} alt={{User.screen_name}} style="width:100%" />
+          <h1>{{User.screen_name}}</h1>
+          <p class="title">{{User.location}} </p>
+          <p class="title">{{User.followers_count}}</p>
+          <p>{{User.friends_count}}</p>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+      </li>
+    </ul>
+
+
 
     <mat-grid-list cols="4" rowHeight="2:1" >
             <mat-grid-tile *ngFor="let user of users" class="card">

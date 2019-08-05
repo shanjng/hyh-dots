@@ -13,16 +13,12 @@ import { User } from '../../models/user.model'
 export class LoginComponent implements OnInit {
   public authUser = new User();
 
-  public email: string;
-  public password: string;
-  nav= new NavBar();
-  navItems = [
-    {name: "  Browse  ", path:'nav/Browse'},
-    {name: "  myDashboard  ", path:'nav/myDashboard'},
-    {name: "  Help  ", path:'nav/help'},
-    {name: "  Logout  ", path:'nav/logout'}
-  ]   
-
+  navItems:  Array<any> =[
+    {name:"Browse", path: "/browse"},
+    {name: "Dashboard", path: "/myDashboard"},
+    {name: "Help", path: "/help"},
+    {name: "Logout", path: "/login"}
+  ];
 
   constructor(private router: Router, private navService: NavService,    private authService: AuthService,
     private userService: UserService,) { 
@@ -33,31 +29,31 @@ export class LoginComponent implements OnInit {
   }
 
   register(){
-    this.router.navigate(['nav/register']);
+    this.router.navigate(['/register']);
   }
 
    login(){
-    // localStorage.setItem('navBar',JSON.stringify(this.navItems));
+    //  localStorage.setItem('navBar',JSON.stringify(this.navItems));
     // window.location.reload();
-    localStorage.setItem('run','true');
-    // this.authService.login(this.authUser).then((res: User) => {
+    // localStorage.setItem('nav','true');
+    // localStorage.setItem('run','true');
+    this.authService.login(this.authUser).then((res: User) => {
+      localStorage.setItem('navBar',JSON.stringify(this.navItems));
+      localStorage.setItem('nav','true');
+      
+ 
+      const testId = localStorage.getItem('userid');
+      console.log(testId);
 
-    //   const testId = localStorage.getItem('userid');
-    //   console.log(testId);
-    this.router.navigate(['nav/browse']);
-        // queryParams: {
-        //   // puts id (res-ponse) in the URL ?user=userid
-        //   user: res.id
-        //  }
-    //   }); 
-    // }).catch(err => {
-    //   console.log("Error: ", err)
-    // })
-    
-   
-
-
-    
+      this.router.navigate(['nav/browse'], {
+        queryParams: {
+          // puts id (res-ponse) in the URL ?user=userid
+          user: res.id
+        }
+      }); 
+    }).catch(err => {
+      console.log("Error: ", err)
+    })
   }
 
 }

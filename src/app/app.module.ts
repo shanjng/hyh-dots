@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +18,13 @@ import {MatCardModule} from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatGridListModule} from '@angular/material/grid-list';
 
+import { AboutComponent } from './components/about/about.component';
+import { HelpComponent } from './components/help/help.component';
+import { FaqComponent } from './components/faq/faq.component';
 
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from './angular-material.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +34,11 @@ import {MatGridListModule} from '@angular/material/grid-list';
     RegisterComponent,
     NavBarComponent,
     BrowseComponent,
-    AuthorizationComponent
+    AuthorizationComponent,
+    AboutComponent,
+    HelpComponent,
+    FaqComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -41,10 +51,12 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatToolbarModule,
     MatCardModule,
     FlexLayoutModule,
-    MatGridListModule
-
+    MatGridListModule,
+    BrowserAnimationsModule,
+    AngularMaterialModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
