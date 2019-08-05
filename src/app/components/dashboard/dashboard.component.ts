@@ -13,7 +13,8 @@ import { TwitterUser } from '../../models/twitterUser.model';
 export class DashboardComponent implements OnInit {
 
   public user = new User();
-  public twitterUser = new TwitterUser();
+  twitterUser: any;
+  twitterUsrID: number;
 
   constructor(
     private userService: UserService,
@@ -21,9 +22,9 @@ export class DashboardComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.user.id = localStorage.getItem('userid');
+    //this.user.id = localStorage.getItem('userid');
     this.getById();
-    this.twitterUser = JSON.parse(localStorage.getItem('twitterUser'));
+    this.twitterUsrID = + localStorage.getItem('twitterUser');
   }
 
   edit() {

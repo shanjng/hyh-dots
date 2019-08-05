@@ -18,7 +18,10 @@ export class BrowseComponent implements OnInit {
   onSelect(user: TwitterUser): void {
 
     this.selectedUser = user;
-    localStorage.setItem("TwitterUser",JSON.stringify(this.selectedUser));
+
+
+    localStorage.setItem("TwitterUser",this.selectedUser.id_str);
+    debugger;
     this.router.navigate(['nav/myDashboard'])
   }
 
