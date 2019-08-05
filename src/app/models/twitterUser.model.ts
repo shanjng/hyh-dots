@@ -1,4 +1,4 @@
-export class User {
+export class TwitterUser {
     public id: number;
     public id_str: string;
     public name: string;
