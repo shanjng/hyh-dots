@@ -32,8 +32,8 @@ export class NavBarComponent implements OnInit {
     // }
     this.nav=JSON.parse(localStorage.getItem('navBar'));
     // console.log(this.navBar.navItems)
-
-
+    console.log(this.nav)
+  
    }
 
   navTo(nav){

@@ -13,6 +13,7 @@ export class AuthService {
 
   login(authUser) {
     return new Promise((resolve, reject) => {
+      console.log("Authuser: ", authUser)
       
       // headers: key value pairs for metadata 
       const headers = new HttpHeaders();

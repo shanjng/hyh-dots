@@ -25,12 +25,12 @@ export class UserService {
         )
     })
   }
-  getUsers(){
+  getUsers(filters){
     return new Promise((resolve, reject) => {
       const headers = new HttpHeaders();
-      this.http.get('http://localhost:5000/users/users', {headers})
+      this.http.post('http://localhost:5000/users/users', filters, {headers})
       .subscribe(response =>{
-        debugger;
+       
         //localStorage.setItem('userid', response);
         console.log(response);
         resolve(response);
