@@ -23,12 +23,14 @@
   button{
     margin-right: 8px;
     font-size: 1em;
-    border-radius: 5px;
-    border-style: double ;
-    border-width: thick;
+    // border-radius: 5px;
+    // border-style: double ;
+    // border-width: thick;
+    width: 15em;
+    height: 2em;
     border-color:black;
-    // background-color:#92A0AA;
-    color: rgb(48, 96, 226);
+    background-color:rgb(48, 96, 226);
+    color: black;
     font-family: 'Montserrat', sans-serif;
 
   }
@@ -37,14 +39,14 @@
     font-size: 1em;
     font-family: 'Montserrat', sans-serif;
     border: none;
-    color: rgb(28, 158, 250);
+    color: rgb(48, 96, 226);
   }
   b{
     font-family: 'Montserrat', sans-serif;
 
   }
   a:hover {
-      text-decoration:underline #92A0AA;
+      text-decoration: unset;
 }
   button:hover{
     // background-color: rgb(28, 158, 250);

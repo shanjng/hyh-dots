@@ -1,3 +1,4 @@
+//TODO update user model for twitter api
 export class User {
     public id: string;
     public name: string;

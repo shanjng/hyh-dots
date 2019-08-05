@@ -5,14 +5,10 @@
              
                 <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Bungee+Outline|Montserrat&display=swap" rel="stylesheet">
                 <mat-toolbar>
-                        <!-- <span>
-                            <img class="logo" src='assets/fullLogo.JPG'/>
-                        </span> -->
+
                         <span class="example-spacer"></span>
-                        <div  align="end" class="right">
-                                        <button   (click)=browse()>  <b>  Browse  </b> </button>
-                                        <button   (click)=login()><b>  Login  </b> </button>
-                                        <button   (click)=register()><b>  Sign Up  </b> </button>
+                        <div  align="end"   *ngFor = 'let nav of nav'>
+                            <a class="left right" (click)='navTo(nav)' >  <u>{{nav.name}}</u>  </a>   
                         </div>
                 </mat-toolbar>
             </header>

@@ -20,7 +20,7 @@ export class NavService {
   constructor(router: Router) { }
 
   async reloadNav(){
-    localStorage.setItem('run', "true");
+    localStorage.setItem('nav', "false");
     return new Promise((resolve,reject)=>{
       localStorage.setItem('navBar', JSON.stringify(this.navItems));
       window.location.reload();

@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
-import { User } from '../../models/user.model'
-import { Router } from '@angular/router'
+import { User } from '../../models/user.model';
+import { Router } from '@angular/router';
+import { TwitterUser } from '../../models/twitterUser.model';
  
 @Component({
   selector: 'app-dashboard',
@@ -12,6 +13,7 @@ import { Router } from '@angular/router'
 export class DashboardComponent implements OnInit {
 
   public user = new User();
+  public twitterUser = new TwitterUser();
 
   constructor(
     private userService: UserService,
@@ -20,7 +22,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.user.id = localStorage.getItem('userid');
-    this.getById()
+    this.getById();
+    this.twitterUser = JSON.parse(localStorage.getItem('twitterUser'));
   }
 
   edit() {

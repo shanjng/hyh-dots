@@ -22,7 +22,7 @@ export class RegisterComponent implements OnInit {
   }
 
   login(){
-    this.router.navigate(['nav/login']);
+    this.router.navigate(['/login']);
   }
   join(){
     // localStorage.setItem('navBar',JSON.stringify(this.navItems));

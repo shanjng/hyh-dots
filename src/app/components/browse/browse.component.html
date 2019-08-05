@@ -1,13 +1,22 @@
-    <!-- <ul *ngFor = 'let user of users'>
-        <li>
-            <img src={{user.profile_image_url}}>
-        </li>
-        <li>screen name: {{user.screen_name}}</li>
-        <li>location: {{user.location}}</li>
-        <li>followers: {{user.followers_count}}</li>
-        <li>friends: {{user.friends_count}}</li>
 
-     </ul>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
 
- -->
-<p> browse works!</p>
+<!--TODO update user endpoints-->
+    <ul class="users">
+      <li *ngFor="let user of users" (click)="onSelect(user)">
+        <div class="card">
+          <div class="imgBox">
+          <img src={{user.profile_image_url}} alt={{user.screen_name}}/>
+        </div>
+          <h1 class="name">{{user.name}}</h1>
+          <p class="title">{{user.location}} </p>
+          <p class="stats">Followers: {{user.followers_count}}</p>
+          <p class="stats">Friends: {{user.friends_count}}</p>
+          <p class="desc">{{user.description}}</p>
+          <a href="https://twitter.com/{{user.screen_name}}"><i class="fa fa-twitter"></i></a>
+        </div>
+      </li>
+    </ul>

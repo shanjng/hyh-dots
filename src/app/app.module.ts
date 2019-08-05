@@ -16,6 +16,12 @@ import { HttpModule } from '@angular/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatGridListModule} from '@angular/material/grid-list';
+
+import { AboutComponent } from './components/about/about.component';
+import { HelpComponent } from './components/help/help.component';
+import { FaqComponent } from './components/faq/faq.component';
+
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
@@ -31,8 +37,10 @@ import { EditprofileComponent } from './components/editprofile/editprofile.compo
     BrowseComponent,
     AuthorizationComponent,
     DashboardComponent,
-    EditprofileComponent
-  ],
+    EditprofileComponent,
+    AboutComponent,
+    HelpComponent,
+    FaqComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -44,6 +52,7 @@ import { EditprofileComponent } from './components/editprofile/editprofile.compo
     MatToolbarModule,
     MatCardModule,
     FlexLayoutModule,
+    MatGridListModule,
     BrowserAnimationsModule,
     AngularMaterialModule
   ],
