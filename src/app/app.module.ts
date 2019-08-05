@@ -19,6 +19,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
+import { EditprofileComponent } from './components/editprofile/editprofile.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AngularMaterialModule } from './angular-material.module';
     NavBarComponent,
     BrowseComponent,
     AuthorizationComponent,
-    DashboardComponent
+    DashboardComponent,
+    EditprofileComponent
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@ export class BrowseComponent implements OnInit {
   navItems: Array<any>
   constructor(private navService: NavService, private userService: UserService) {
     this.navItems=  [
-      {name: "   Browse   ", path:'nav/Browse'},
+      {name: "   Browse   ", path:'nav/browse'},
       {name: "   myDashboard    ", path:'nav/myDashboard'},
       {name: "   Help   ", path:'nav/help'},
       {name: "   Logout   ", path:'nav/logout'}
@@ -21,17 +21,17 @@ export class BrowseComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (localStorage.getItem('run')=='true'){
-      localStorage.setItem('navBar', JSON.stringify(this.navItems));
-      window.location.reload();
-      localStorage.setItem('run','false');
-    }
-      this.userService.getUsers().then(res=>{
-        console.log(res);
-        this.users=res;
-      }).catch(err=>{
-        console.log(err);
-      })
+    // if (localStorage.getItem('run')=='true'){
+    //   localStorage.setItem('navBar', JSON.stringify(this.navItems));
+    //   window.location.reload();
+    //   localStorage.setItem('run','false');
+    // }
+    //   this.userService.getUsers().then(res=>{
+    //     console.log(res);
+    //     this.users=res;
+    //   }).catch(err=>{
+    //     console.log(err);
+    //   })
 
   }
 

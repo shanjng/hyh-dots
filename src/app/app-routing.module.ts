@@ -7,6 +7,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { BrowseComponent } from './components/browse/browse.component';
 import { AuthorizationComponent } from './components/authorization/authorization.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { EditprofileComponent } from './components/editprofile/editprofile.component'
 
 
 const routes: Routes = [
@@ -16,8 +17,10 @@ const routes: Routes = [
     { path: 'register', component: RegisterComponent},
     { path: 'browse', component: BrowseComponent},
     { path: 'myDashboard', component: DashboardComponent},
+    { path: 'editprofile', component: EditprofileComponent}
   ]},
   { path: 'authorize', component: AuthorizationComponent},
+  
 ];
 
 @NgModule({
