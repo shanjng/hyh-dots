@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class BrowseComponent implements OnInit {
   public navBar = new NavBar();
+  //public twitterUser = new TwitterUser();
   users: any;
 
   selectedUser: TwitterUser;
@@ -20,8 +21,8 @@ export class BrowseComponent implements OnInit {
     this.selectedUser = user;
 
 
-    localStorage.setItem("TwitterUser",this.selectedUser.id_str);
-    debugger;
+    localStorage.setItem("TwitterUser",JSON.stringify(this.selectedUser));
+    
     this.router.navigate(['nav/myDashboard'])
   }
 
