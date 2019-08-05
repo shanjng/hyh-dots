@@ -1,4 +1,4 @@
-<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+
 <link
 rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -20,16 +20,3 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
         </div>
       </li>
     </ul>
-
-
-
-    <mat-grid-list cols="4" rowHeight="2:1" >
-            <mat-grid-tile *ngFor="let user of users" class="card">
-                <mat-card >
-                    <img mat-card-avatar src={{user.profile_image_url}} align="center"><br>
-                    <mat-card-title>{{user.name}}</mat-card-title>
-                    
-                    </mat-card> 
-            </mat-grid-tile>
-
-          </mat-grid-list>
