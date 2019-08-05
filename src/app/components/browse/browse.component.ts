@@ -3,6 +3,7 @@ import { NavService } from "../../services/nav.service";
 import { NavBar } from "../../nav-bar";
 import { UserService } from "../../services/user.service";
 import { TwitterUser } from "../../models/twitterUser.model";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-browse",
@@ -17,11 +18,13 @@ export class BrowseComponent implements OnInit {
   onSelect(user: TwitterUser): void {
     this.selectedUser = user;
     localStorage.setItem("TwitterUser",JSON.stringify(this.selectedUser));
+    this.router.navigate(['nav/myDashboard'])
   }
 
   constructor(
     private navService: NavService,
-    private userService: UserService
+    private userService: UserService,
+    private router: Router
   ) {}
 
   ngOnInit() {
