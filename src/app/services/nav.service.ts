@@ -13,10 +13,6 @@ export class NavService {
     {name: "  Logout  ", path:'/logout'}
   ];
 
-
-
-  
-
   constructor(router: Router) { }
 
   async reloadNav(){
