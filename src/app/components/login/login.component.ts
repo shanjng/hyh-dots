@@ -13,7 +13,12 @@ import { User } from '../../models/user.model'
 export class LoginComponent implements OnInit {
   public authUser = new User();
 
-
+  navItems:  Array<any> =[
+    {name:"Browse", path: "/nav/browse"},
+    {name: "Dashboard", path: "/nav/myDashboard"},
+    {name: "Help", path: "/nav/help"},
+    {name: "Logout", path: "/nav/login"}
+  ];
 
   constructor(private router: Router, private navService: NavService,    private authService: AuthService,
     private userService: UserService,) { 
@@ -24,7 +29,7 @@ export class LoginComponent implements OnInit {
   }
 
   register(){
-    this.router.navigate(['/register']);
+    this.router.navigate(['/nav/register']);
   }
 
    login(){
