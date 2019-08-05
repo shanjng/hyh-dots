@@ -6,13 +6,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
 
 <!--TODO update user endpoints-->
     <ul class="users">
-      <li *ngFor="let User of users" (click)="onSelect(User)">
+      <li *ngFor="let user of users" (click)="onSelect(user)">
         <div class="card">
-          <img src={{User.profile_image_url}} alt={{User.screen_name}} style="width:100%" />
-          <h1>{{User.screen_name}}</h1>
-          <p class="title">{{User.location}} </p>
-          <p class="title">{{User.followers_count}}</p>
-          <p>{{User.friends_count}}</p>
+          <div class="imgBox">
+          <img src={{user.profile_image_url}} alt={{user.screen_name}}/>
+        </div>
+          <h1 class="name">{{user.screen_name}}</h1>
+          <p class="title">{{user.location}} </p>
+          <p class="stats">Followers: {{user.followers_count}}</p>
+          <p class="stats">Friends: {{user.friends_count}}</p>
+          <p class="desc">{{user.description}}</p>
           <a href="#"><i class="fa fa-twitter"></i></a>
         </div>
       </li>
