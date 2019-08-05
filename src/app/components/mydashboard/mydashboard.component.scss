@@ -13,6 +13,11 @@
     font-family: Comfortaa;
 }
 
+.edit {
+    position: fixed;
+    right: 50px;
+}
+
 i {
     all: none;
 }
@@ -116,19 +121,19 @@ body {
 }
 .biocol2 {
     float: left;
-    width: 10%;
+    width: 5%;
 }
 .biocol3 {
     float: left;
-    width: 20%;
+    width: 25%;
 }
 .biocol4 {
     float: left;
-    width: 30%;
+    width: 10%;
 }
 .biocol5 {
     float: left;
-    width: 20%;
+    width: 40%;
 }
 
 .row2col1 {

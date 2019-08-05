@@ -54,7 +54,7 @@ export class UserService {
 
   getById(id) {
     return new Promise((resolve, reject)=> {
-      this.http.get(environment.BaseURL + '/api/user/' + id)
+      this.http.get(environment.BaseURL + '/users/' + id)
       .subscribe(
         (response: any)=>{
           resolve(response)

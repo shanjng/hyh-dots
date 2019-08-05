@@ -24,7 +24,7 @@ export class BrowseComponent implements OnInit {
 
     localStorage.setItem("twitterUser",JSON.stringify(this.selectedUser));
     
-    this.router.navigate(['nav/myDashboard'])
+    this.router.navigate(['nav/dashboard'])
   }
 
   constructor(

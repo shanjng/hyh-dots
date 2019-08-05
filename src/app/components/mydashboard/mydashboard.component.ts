@@ -4,17 +4,15 @@ import { UserService } from 'src/app/services/user.service';
 import { User } from '../../models/user.model';
 import { Router } from '@angular/router';
 
- 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss'],
+  selector: 'app-mydashboard',
+  templateUrl: './mydashboard.component.html',
+  styleUrls: ['./mydashboard.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class DashboardComponent implements OnInit {
+export class MydashboardComponent implements OnInit {
 
   public user = new User();
-  public twitterUser = new TwitterUser();
   
   constructor(
     private userService: UserService,
@@ -22,12 +20,11 @@ export class DashboardComponent implements OnInit {
     ) { }
     
     async ngOnInit() {
-      //this.user.id = localStorage.getItem('userid');
+      this.user.id = localStorage.getItem('userid');
       this.getById();
-      
-      this.twitterUser = JSON.parse(localStorage.getItem('twitterUser'));
-        }
-    
+      // this.user = JSON.parse(localStorage.getItem('user'));
+    }
+
 
   edit() {
     this.userService.updateUser(this.user).then(res => {
