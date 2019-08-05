@@ -1,25 +1,37 @@
-import { Component, OnInit } from '@angular/core';
-import {NavService} from '../../services/nav.service';
-import { NavBar } from '../../nav-bar'
-import {UserService} from '../../services/user.service';
-import {User} from '../../models/twitterUser.model'
+import { Component, OnInit } from "@angular/core";
+import { NavService } from "../../services/nav.service";
+import { NavBar } from "../../nav-bar";
+import { UserService } from "../../services/user.service";
+import { TwitterUser } from "../../models/twitterUser.model";
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-browse',
-  templateUrl: './browse.component.html',
-  styleUrls: ['./browse.component.scss']
+  selector: "app-browse",
+  templateUrl: "./browse.component.html",
+  styleUrls: ["./browse.component.scss"]
 })
 export class BrowseComponent implements OnInit {
-  public navBar = new NavBar()
+  public navBar = new NavBar();
+  //public twitterUser = new TwitterUser();
   users: any;
-  selectedUser: User;
   filters: any[];
+  selectedUser: TwitterUser;
 
-  onSelect(user: User): void {  
-   this.selectedUser = user;
+  onSelect(user: TwitterUser): void {
+
+    this.selectedUser = user;
+
+
+    localStorage.setItem("twitterUser",JSON.stringify(this.selectedUser));
+    
+    this.router.navigate(['nav/myDashboard'])
   }
 
-  constructor(private navService: NavService, private userService: UserService) {
+  constructor(
+    private navService: NavService,
+    private userService: UserService,
+    private router: Router
+  ) {
     this.filters=[
       {
         topic: "",
@@ -29,25 +41,22 @@ export class BrowseComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (localStorage.getItem('nav')==='true'){
-      this.navService.reloadNav().then(res=>{
-        console.log(res);
-  
-      }).catch(err=>{
-        console.log(err);
-      }) 
+    if (localStorage.getItem("nav") === "true") {
+      this.navService
+        .reloadNav()
+        .then(res => {
+          console.log(res);
+        })
+        .catch(err => {
+          console.log(err);
+        });
     }
       this.userService.getUsers(this.filters[0]).then(res=>{
-        console.log(res);
-        this.users=res;
-      }).catch(err=>{
-        console.log(err);
+        // console.log(res);
+        this.users = res;
       })
-      
-
+      .catch(err => {
+        console.log("err in browse component: ", err);
+      });
   }
-
-
 }
-
-

@@ -20,6 +20,7 @@ export class AuthService {
 
       this.http.post(environment.BaseURL + "/api/auth/login", authUser, { headers }).subscribe(
         (response: any) => {
+          console.log("response: ", response)
         localStorage.setItem("userid", response.id);
         resolve(response)
       },

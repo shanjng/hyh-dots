@@ -25,6 +25,7 @@ import { FaqComponent } from './components/faq/faq.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
+import { EditprofileComponent } from './components/editprofile/editprofile.component';
 
 @NgModule({
   declarations: [
@@ -35,11 +36,11 @@ import { AngularMaterialModule } from './angular-material.module';
     NavBarComponent,
     BrowseComponent,
     AuthorizationComponent,
+    DashboardComponent,
+    EditprofileComponent,
     AboutComponent,
     HelpComponent,
-    FaqComponent,
-    DashboardComponent
-  ],
+    FaqComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

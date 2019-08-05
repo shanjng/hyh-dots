@@ -38,7 +38,6 @@ export class LoginComponent implements OnInit {
     // localStorage.setItem('nav','true');
     // localStorage.setItem('run','true');
     this.authService.login(this.authUser).then((res: User) => {
-      localStorage.setItem('navBar',JSON.stringify(this.navItems));
       localStorage.setItem('nav','true');
       
  
@@ -55,5 +54,20 @@ export class LoginComponent implements OnInit {
       console.log("Error: ", err)
     })
   }
+
+    // localStorage.setItem('run','true');
+    //   this.authService.login(this.authUser).then((res: User) => {
+
+    //     const testId = localStorage.getItem('userid');
+    //     console.log(testId);
+    //   this.router.navigate(['/browse']);
+    //       // queryParams: {
+    //       //   // puts id (res-ponse) in the URL ?user=userid
+    //       //   user: res.id
+    //       //  }
+    //     })
+    //   .catch(err => {
+    //     console.log("Error: ", err)
+    //   })
 
 }
