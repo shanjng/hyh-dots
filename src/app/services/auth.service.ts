@@ -17,8 +17,9 @@ export class AuthService {
       // headers: key value pairs for metadata 
       const headers = new HttpHeaders();
 
-      this.http.post(environment.BaseURL + "/api/auth/login", authUser, { headers }).subscribe(
+      this.http.post('http://localhost:5000' + "/api/auth/login", authUser, { headers }).subscribe(
         (response: any) => {
+          console.log("response: ", response)
         localStorage.setItem("userid", response.id);
         resolve(response)
       },

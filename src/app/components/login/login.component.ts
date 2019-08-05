@@ -13,12 +13,7 @@ import { User } from '../../models/user.model'
 export class LoginComponent implements OnInit {
   public authUser = new User();
 
-  navItems:  Array<any> =[
-    {name:"Browse", path: "/browse"},
-    {name: "Dashboard", path: "/myDashboard"},
-    {name: "Help", path: "/help"},
-    {name: "Logout", path: "/login"}
-  ];
+
 
   constructor(private router: Router, private navService: NavService,    private authService: AuthService,
     private userService: UserService,) { 
@@ -38,7 +33,6 @@ export class LoginComponent implements OnInit {
     // localStorage.setItem('nav','true');
     // localStorage.setItem('run','true');
     this.authService.login(this.authUser).then((res: User) => {
-      localStorage.setItem('navBar',JSON.stringify(this.navItems));
       localStorage.setItem('nav','true');
       
  
@@ -55,5 +49,20 @@ export class LoginComponent implements OnInit {
       console.log("Error: ", err)
     })
   }
+
+    // localStorage.setItem('run','true');
+    //   this.authService.login(this.authUser).then((res: User) => {
+
+    //     const testId = localStorage.getItem('userid');
+    //     console.log(testId);
+    //   this.router.navigate(['/browse']);
+    //       // queryParams: {
+    //       //   // puts id (res-ponse) in the URL ?user=userid
+    //       //   user: res.id
+    //       //  }
+    //     })
+    //   .catch(err => {
+    //     console.log("Error: ", err)
+    //   })
 
 }

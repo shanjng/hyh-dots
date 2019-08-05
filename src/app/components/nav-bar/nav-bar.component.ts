@@ -20,16 +20,7 @@ export class NavBarComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    // if (localStorage.getItem('nav')==='true'){
-    //   this.navbarService.reloadNav().then(res=>{
-    //     console.log(res);
-  
-    //   }).catch(err=>{
-    //     console.log(err);
-    //   })
-        
-    // }
-    // }
+
     this.nav=JSON.parse(localStorage.getItem('navBar'));
     // console.log(this.navBar.navItems)
 
