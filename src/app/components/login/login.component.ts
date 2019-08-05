@@ -13,7 +13,12 @@ import { User } from '../../models/user.model'
 export class LoginComponent implements OnInit {
   public authUser = new User();
 
-  nav= new NavBar();
+  navItems:  Array<any> =[
+    {name:"Browse", path: "/browse"},
+    {name: "Dashboard", path: "/myDashboard"},
+    {name: "Help", path: "/help"},
+    {name: "Logout", path: "/login"}
+  ];
 
   constructor(private router: Router, private navService: NavService,    private authService: AuthService,
     private userService: UserService,) { 
@@ -28,15 +33,19 @@ export class LoginComponent implements OnInit {
   }
 
    login(){
-    // localStorage.setItem('navBar',JSON.stringify(this.navItems));
+    //  localStorage.setItem('navBar',JSON.stringify(this.navItems));
     // window.location.reload();
-    localStorage.setItem('run','true');
+    // localStorage.setItem('nav','true');
+    // localStorage.setItem('run','true');
     this.authService.login(this.authUser).then((res: User) => {
-
+      localStorage.setItem('navBar',JSON.stringify(this.navItems));
+      localStorage.setItem('nav','true');
+      
+ 
       const testId = localStorage.getItem('userid');
       console.log(testId);
 
-      this.router.navigate(['/browse'], {
+      this.router.navigate(['nav/browse'], {
         queryParams: {
           // puts id (res-ponse) in the URL ?user=userid
           user: res.id

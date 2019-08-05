@@ -9,8 +9,8 @@
                 </a>
             </span>
             <span class="example-spacer"></span>
-            <div  align="end" class="right"  *ngFor = 'let nav of navBar.navItems'>
-                <button  (click)='navTo(nav)' >{{nav.name}}</button>   
+            <div  align="end"   *ngFor = 'let nav of nav'>
+                <a class="left right" (click)='navTo(nav)' >  <u>{{nav.name}}</u>  </a>   
             </div>
     </mat-toolbar>
 </header>

@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {MatSidenavModule} from '@angular/material';
 import {NavService} from '../../services/nav.service';
-import {NavBar} from '../../nav-bar';;
+import {NavBar} from '../../nav-bar';import { resolve } from 'q';
+;
 
 @Component({
   selector: 'app-nav-bar',
@@ -11,14 +12,32 @@ import {NavBar} from '../../nav-bar';;
 })
 export class NavBarComponent implements OnInit {
   public navBar = new NavBar()
+  nav: any;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private navbarService: NavService
     ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    // if (localStorage.getItem('nav')==='true'){
+    //   this.navbarService.reloadNav().then(res=>{
+    //     console.log(res);
+  
+    //   }).catch(err=>{
+    //     console.log(err);
+    //   })
+        
+    // }
+    // }
+    this.nav=JSON.parse(localStorage.getItem('navBar'));
+    // console.log(this.navBar.navItems)
+
+
+   }
 
   navTo(nav){
+
     this.router.navigate([nav.path]);
   }
 }

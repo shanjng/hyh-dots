@@ -1,3 +1,20 @@
+.card {
+    max-width: 200px;
+    max-height: 200px;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+   
+
+  }
+  mat-card{
+      border-style: double ;
+      border-width: thick;
+      border-color: rgb(48, 96, 226);
+      
+    }
+    mat-grid-list{
+        margin: 50px;
+    }
 ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;

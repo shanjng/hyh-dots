@@ -12,7 +12,6 @@ import {User} from '../../models/twitterUser.model'
 export class BrowseComponent implements OnInit {
   public navBar = new NavBar()
   users: any;
-
   selectedUser: User;
   onSelect(user: User): void {
     
@@ -23,19 +22,24 @@ export class BrowseComponent implements OnInit {
   constructor(private navService: NavService, private userService: UserService) {}
 
   ngOnInit() {
-    //  if (localStorage.getItem('run')=='true'){
-    //    localStorage.setItem('navBar', JSON.stringify(this.navItems));
-    //    window.location.reload();
-    //    localStorage.setItem('run','false');
-    //  }
+    if (localStorage.getItem('nav')==='true'){
+      this.navService.reloadNav().then(res=>{
+        console.log(res);
+  
+      }).catch(err=>{
+        console.log(err);
+      }) 
+    }
       this.userService.getUsers().then(res=>{
         console.log(res);
         this.users=res;
       }).catch(err=>{
         console.log(err);
       })
+      
 
   }
+
 
 }
 

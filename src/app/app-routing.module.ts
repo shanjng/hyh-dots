@@ -12,8 +12,8 @@ import { HelpComponent } from './components/help/help.component';
 import { FaqComponent } from './components/faq/faq.component';
 
 const routes: Routes = [
-  { path: '', component: NavBarComponent, children:[
-      { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent },
+  { path: 'nav', component: NavBarComponent, children:[
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
       { path: 'browse', component: BrowseComponent },

@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 import { AboutComponent } from './components/about/about.component';
 import { HelpComponent } from './components/help/help.component';
 import { FaqComponent } from './components/faq/faq.component';
@@ -47,7 +50,8 @@ import { AngularMaterialModule } from './angular-material.module';
     AvatarModule.forRoot(),
     MatToolbarModule,
     MatCardModule,
-    
+    FlexLayoutModule,
+    MatGridListModule,
     BrowserAnimationsModule,
     AngularMaterialModule
   ],

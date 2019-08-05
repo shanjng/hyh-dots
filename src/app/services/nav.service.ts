@@ -7,10 +7,10 @@ import {Router} from '@angular/router';
 })
 export class NavService {
   navItems: Array<any> =  [
-    {name: "  Browse  ", path:'/browse'},
-    {name: "  myDashboard  ", path:'/myDashboard'},
-    {name: "  Help  ", path:'/help'},
-    {name: "  Logout  ", path:'/logout'}
+    {name: "  Browse  ", path:'nav/browse'},
+    {name: "  myDashboard  ", path:'nav/myDashboard'},
+    {name: "  Help  ", path:'nav/help'},
+    {name: "  Logout  ", path:'nav/logout'}
   ];
 
 
@@ -20,7 +20,7 @@ export class NavService {
   constructor(router: Router) { }
 
   async reloadNav(){
-    localStorage.setItem('run', "true");
+    localStorage.setItem('nav', "false");
     return new Promise((resolve,reject)=>{
       localStorage.setItem('navBar', JSON.stringify(this.navItems));
       window.location.reload();
