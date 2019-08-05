@@ -15,6 +15,8 @@ export class BrowseComponent implements OnInit {
 
   selectedUser: User;
   onSelect(user: User): void {
+    
+    
    this.selectedUser = user;
   }
 
