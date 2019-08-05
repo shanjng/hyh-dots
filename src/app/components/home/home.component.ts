@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import {NavBar} from '../../nav-bar';
 
 
 
@@ -10,11 +11,12 @@ import {Router} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  nav = [
+    {name:"What We Do", path: "nav/about"},
+    {name:"Browse", path: "nav/browse"},
+    {name:"Login", path: "nav/login"},
+    {name:"Sign Up", path: "nav/register"}
 
-  navItems = [
-    {name:"Browse", path: "/browse"},
-    {name:"Login", path: "/login"},
-    {name:"Sign Up", path: "/register"}
   ]
 
   constructor(private router: Router) {
@@ -22,19 +24,13 @@ export class HomeComponent implements OnInit {
    }
 
   ngOnInit() {
-    localStorage.setItem('navBar', JSON.stringify(this.navItems));
+    localStorage.setItem('nav','false');
+    localStorage.setItem('navBar', JSON.stringify(this.nav));
   }
 
-  login(){
+  navTo(nav){
 
-    this.router.navigate(['/login']);
-  }
-  register(){
- 
-    this.router.navigate(['/register']);
-  }
-  browse(){
-    this.router.navigate(['/browse']);
+    this.router.navigate([nav.path]);
   }
 
 }
