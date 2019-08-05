@@ -21,11 +21,16 @@ export class DashboardComponent implements OnInit {
     private router: Router
     ) { }
     
-    ngOnInit() {
+    async ngOnInit() {
       //this.user.id = localStorage.getItem('userid');
+      this.getById();
+      
       this.twitterUser = JSON.parse(localStorage.getItem('twitterUser'));
-    this.getById();
-  }
+        }
+    
+ 
+      
+  
 
   edit() {
     this.userService.updateUser(this.user).then(res => {
