@@ -27,7 +27,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AngularMaterialModule } from "./angular-material.module";
 import { EditprofileComponent } from "./components/editprofile/editprofile.component";
 
-import { CookieService } from "ngx-cookie-service";
+import { CookieService } from 'ngx-cookie-service';
+import { MydashboardComponent } from './components/mydashboard/mydashboard.component';
+import { TopmatchesComponent } from './components/topmatches/topmatches.component';
 
 @NgModule({
   declarations: [
@@ -42,8 +44,9 @@ import { CookieService } from "ngx-cookie-service";
     EditprofileComponent,
     AboutComponent,
     HelpComponent,
-    FaqComponent
-  ],
+    FaqComponent,
+    MydashboardComponent,
+    TopmatchesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

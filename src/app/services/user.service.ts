@@ -46,10 +46,11 @@ export class UserService {
   }
 
   getById(id) {
-    return new Promise((resolve, reject) => {
-      this.http.get(environment.BaseURL + "/api/user/" + id).subscribe(
-        (response: any) => {
-          resolve(response);
+    return new Promise((resolve, reject)=> {
+      this.http.get(environment.BaseURL + '/users/' + id)
+      .subscribe(
+        (response: any)=>{
+          resolve(response)
         },
         err => reject(err)
       );

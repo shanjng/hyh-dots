@@ -13,14 +13,19 @@ import { Router } from "@angular/router";
 export class DashboardComponent implements OnInit {
   public user = new User();
   public twitterUser = new TwitterUser();
-
-  constructor(private userService: UserService, private router: Router) {}
-
-  async ngOnInit() {
-    this.getById();
-
-    this.twitterUser = JSON.parse(localStorage.getItem("twitterUser"));
-  }
+  
+  constructor(
+    private userService: UserService,
+    private router: Router
+    ) { }
+    
+    async ngOnInit() {
+      //this.user.id = localStorage.getItem('userid');
+      this.getById();
+      
+      this.twitterUser = JSON.parse(localStorage.getItem('twitterUser'));
+        }
+    
 
   edit() {
     this.userService

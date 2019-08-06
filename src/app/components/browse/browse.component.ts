@@ -24,7 +24,9 @@ export class BrowseComponent implements OnInit {
       JSON.stringify(this.selectedUser)
     );
 
-    this.router.navigate(["nav/myDashboard"]);
+    await localStorage.setItem("twitterUser",JSON.stringify(this.selectedUser));
+    
+    this.router.navigate(['nav/dashboard'])
   }
 
   constructor(
