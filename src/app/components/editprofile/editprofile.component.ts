@@ -19,6 +19,7 @@ export class EditprofileComponent implements OnInit {
     this.getById();
   }
 
+  //edit user
   edit() {
     this.userService
       .updateUser(this.user)
@@ -31,6 +32,7 @@ export class EditprofileComponent implements OnInit {
     this.router.navigate(["nav/myDashboard"]);
   }
 
+  //get user by ID
   getById() {
     this.userService
       .getById(this.user.id)

@@ -13,7 +13,7 @@ export class NavService {
   ];
 
   constructor(router: Router) {}
-
+  //reload navigation
   async reloadNav() {
     localStorage.setItem("nav", "false");
     return new Promise((resolve, reject) => {

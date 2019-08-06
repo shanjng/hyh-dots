@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
     localStorage.setItem("navBar", JSON.stringify(this.nav));
   }
 
+  //navigation
   navTo(nav) {
     this.router.navigate([nav.path]);
   }

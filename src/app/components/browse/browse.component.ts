@@ -16,6 +16,7 @@ export class BrowseComponent implements OnInit {
   filters: any[];
   selectedUser: TwitterUser;
 
+  //grabs user from selected card and saves to local storage
   async onSelect(user: TwitterUser): Promise<void> {
     this.selectedUser = user;
 
@@ -24,9 +25,12 @@ export class BrowseComponent implements OnInit {
       JSON.stringify(this.selectedUser)
     );
 
-    await localStorage.setItem("twitterUser",JSON.stringify(this.selectedUser));
-    
-    this.router.navigate(['nav/dashboard'])
+    await localStorage.setItem(
+      "twitterUser",
+      JSON.stringify(this.selectedUser)
+    );
+
+    this.router.navigate(["nav/dashboard"]);
   }
 
   constructor(
@@ -43,6 +47,7 @@ export class BrowseComponent implements OnInit {
   }
 
   ngOnInit() {
+    //navigation
     if (localStorage.getItem("nav") === "true") {
       this.navService
         .reloadNav()
@@ -53,6 +58,7 @@ export class BrowseComponent implements OnInit {
           console.log(err);
         });
     }
+    //grabs users from api for browser
     this.userService
       .getUsers(this.filters[0])
       .then(res => {

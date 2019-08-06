@@ -1,3 +1,4 @@
+//user model for twitter users
 export class TwitterUser {
   public id: number;
   public id_str: string;

@@ -8,6 +8,7 @@ import { environment } from "../../environments/environment.prod";
 export class UserService {
   constructor(private http: HttpClient) {}
 
+  //get all users from test data DEPRICATED
   getAll() {
     return new Promise((resolve, reject) => {
       this.http.get(environment.BaseURL + "/api/user/get").subscribe(
@@ -20,6 +21,8 @@ export class UserService {
       );
     });
   }
+
+  //get all twitter users from api
   getUsers(filters) {
     return new Promise((resolve, reject) => {
       const headers = new HttpHeaders();
@@ -35,6 +38,8 @@ export class UserService {
         );
     });
   }
+
+  //change web app user details from api DEPRICATED
   updateUser(user) {
     return new Promise((resolve, reject) => {
       this.http
@@ -45,6 +50,7 @@ export class UserService {
     });
   }
 
+  //get twitter user by ID from api
   getById(id) {
     return new Promise((resolve, reject)=> {
       this.http.get(environment.BaseURL + '/users/' + id)

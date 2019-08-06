@@ -8,11 +8,11 @@ import { environment } from "../../environments/environment.prod";
 export class AuthService {
   constructor(private http: HttpClient) {}
 
+  //calls api to log in user
   login(authUser) {
     return new Promise((resolve, reject) => {
       console.log("Authuser: ", authUser);
 
-      // headers: key value pairs for metadata
       const headers = new HttpHeaders();
 
       this.http
