@@ -50,4 +50,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `index.html` in the `Documentation` folder to view the documentation.
 
-To update documentation install compodoc by running `npm install -g @compodoc/compodoc` and create/update documentation by running `"compodoc": "npx compodoc -p tsconfig.app.json"` in your project.
+To update documentation install compodoc by running `npm install -g @compodoc/compodoc` and create/update documentation by running `compodoc -p tsconfig.app.json -s` in your project.
