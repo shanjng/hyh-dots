@@ -13,6 +13,7 @@ import { User } from "../../models/user.model";
 export class LoginComponent implements OnInit {
   public authUser = new User();
 
+  //sets navigaion items
   navItems: Array<any> = [
     { name: "Browse", path: "/nav/browse" },
     { name: "Dashboard", path: "/nav/myDashboard" },
@@ -29,10 +30,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {}
 
+  //navigate to register page
   register() {
     this.router.navigate(["/nav/register"]);
   }
 
+  //logs user in
   login() {
     this.authService
       .login(this.authUser)

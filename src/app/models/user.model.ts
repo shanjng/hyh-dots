@@ -1,3 +1,4 @@
+//user model for web app users
 export class User {
   public id: string;
   public name: string;

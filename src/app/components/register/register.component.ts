@@ -19,9 +19,11 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {}
 
+  //navigate to login
   login() {
     this.router.navigate(["/login"]);
   }
+  
   join() {
     localStorage.setItem("run", "true");
     this.router.navigate(["authorize"]);
