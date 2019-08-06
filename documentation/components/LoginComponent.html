@@ -180,7 +180,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/components/login/login.component.ts:21</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/components/login/login.component.ts:22</a></div>
                             </td>
                         </tr>
 
@@ -285,8 +285,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">src/app/components/login/login.component.ts:36</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app/components/login/login.component.ts:39</a></div>
                 </td>
             </tr>
 
@@ -324,8 +324,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">src/app/components/login/login.component.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/components/login/login.component.ts:31</a></div>
                 </td>
             </tr>
 
@@ -363,8 +363,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/app/components/login/login.component.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/components/login/login.component.ts:34</a></div>
                 </td>
             </tr>
 
@@ -443,7 +443,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/login/login.component.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/login/login.component.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -471,6 +471,7 @@ import { User } from &quot;../../models/user.model&quot;;
 export class LoginComponent implements OnInit {
   public authUser &#x3D; new User();
 
+  //sets navigaion items
   navItems: Array&lt;any&gt; &#x3D; [
     { name: &quot;Browse&quot;, path: &quot;/nav/browse&quot; },
     { name: &quot;Dashboard&quot;, path: &quot;/nav/myDashboard&quot; },
@@ -487,10 +488,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {}
 
+  //navigate to register page
   register() {
     this.router.navigate([&quot;/nav/register&quot;]);
   }
 
+  //logs user in
   login() {
     this.authService
       .login(this.authUser)
