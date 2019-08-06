@@ -1,7 +1,6 @@
-
 <link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 />
 
 <button mdbBtn color="primary" class="waves-light" type="button" (click)="test.toggle()" mdbWavesEffect>
@@ -81,3 +80,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
         </div>
       </li>
     </ul>
+<ul class="users">
+  <li *ngFor="let user of users" (click)="onSelect(user)">
+    <div class="card">
+      <div class="imgBox">
+        <img src="{{ user.profile_image_url }}" alt="{{ user.screen_name }}" />
+      </div>
+      <h1 class="name">{{ user.name }}</h1>
+      <p class="title">{{ user.location }}</p>
+      <a href="https://twitter.com/{{ user.screen_name }}"
+        ><i class="fa fa-twitter"></i
+      ></a>
+    </div>
+  </li>
+</ul>

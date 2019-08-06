@@ -13,63 +13,70 @@
     mat-grid-list{
         margin: 10px;
     }
+mat-card {
+  border-style: double;
+  border-width: thick;
+  border-color: rgb(48, 96, 226);
+}
+mat-grid-list {
+  margin: 50px;
+}
 ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    list-style-type: none;
-  }
-  
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 220px;
-    margin: 20px;
-    text-align: center;
-    
-  }
-  .imgBox{
-    max-height: 70px;
-  }
-  .title {
-    color: grey;
-    font-size: 15px;
-  }
-  .name{
-    font-size: 20px;
-  }
-  .desc{
-    font-size: 13px;
-  }
-  .stats{
-    font-size: 15px;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  list-style-type: none;
+}
 
-  button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-  }
-  
-  a {
-    text-decoration: none;
-    font-size: 22px;
-    color: black;
-  }
-  
-  button:hover,
-  a:hover {
-    opacity: 0.7;
-  }
-  
-  img {
-    border-radius: 50%;
-    height: 95%;
-    width: 36%;
-    margin-top: 5px;
-  }
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 220px;
+  margin: 20px;
+  text-align: center;
+}
+.imgBox {
+  max-height: 70px;
+}
+.title {
+  color: grey;
+  font-size: 15px;
+}
+.name {
+  font-size: 20px;
+}
+.desc {
+  font-size: 13px;
+}
+.stats {
+  font-size: 15px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.7;
+}
+
+img {
+  border-radius: 50%;
+  height: 95%;
+  width: 36%;
+  margin-top: 5px;
+}

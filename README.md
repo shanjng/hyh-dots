@@ -44,3 +44,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+
+## Documentation
+
+Run `index.html` in the `Documentation` folder to view the documentation.
+
+To update documentation install compodoc by running `npm install -g @compodoc/compodoc` and create/update documentation by running `compodoc -p tsconfig.app.json -s` in your project.

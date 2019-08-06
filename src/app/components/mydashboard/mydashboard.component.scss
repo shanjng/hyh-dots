@@ -1,0 +1,190 @@
+.mat-tab-label:not(.mat-tab-disabled):focus,
+.mat-tab-link:not(.mat-tab-disabled):focus,
+.mat-tab-group.mat-primary .mat-tab-label-active {
+    border-bottom: 2px solid yellow;
+}
+
+.mat-tab-label {
+    min-width: 25px;
+    padding: 5px;
+    background-color: transparent;
+    color: black;
+    font-weight: 700;
+    font-family: Comfortaa;
+}
+
+.edit {
+    position: fixed;
+    right: 50px;
+}
+
+i {
+    all: none;
+}
+
+h1 {
+    font-size: 26pt;
+}
+h2 {
+    font-size: 20pt;
+}
+h3 {
+    font-size: 16pt;
+}
+
+input[type=text1] {
+    padding: 8px 10px;
+    box-sizing: border-box;
+    font-size: 12pt
+}
+input[type=text2] {
+    padding: 8px 10px;
+    box-sizing: border-box;
+    font-size: 18pt
+}
+input[type=text3] {
+    padding: 8px 10px;
+    box-sizing: border-box;
+    font-size: 14pt
+}
+
+body {
+    font-family: Comfortaa;
+    margin: 20px
+}
+
+.parent {
+    text-align: center;
+    align-content: center;
+}
+
+.inline-block-child {
+    position: relative;
+    display: inline-block;
+}
+
+.face {
+    border-radius: 50%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    position: relative;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+    position: relative;
+}
+
+.cardcol {
+    float: left;
+    width: 25%;
+    padding: 0 15px;
+    margin: 4px 4px;
+    border: 2px solid #555555;
+}
+
+.row {
+    margin: 0;
+    font-family: Comfortaa;
+}
+
+.center {
+    text-align: center;
+    align-content: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.biocol1 {
+    float: left;
+    width: 20%;
+}
+.biocol2 {
+    float: left;
+    width: 5%;
+}
+.biocol3 {
+    float: left;
+    width: 25%;
+}
+.biocol4 {
+    float: left;
+    width: 10%;
+}
+.biocol5 {
+    float: left;
+    width: 40%;
+}
+
+.row2col1 {
+    float: left;
+    width: 55%;
+}
+.row2col2 {
+    float: right;
+    width: 40%;
+}
+
+.row3col {
+    float: left;
+    width: 33%;
+    padding: 4 0px;
+}
+
+
+p {
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.center2 {
+    vertical-align: middle;
+    transform: translate(30%, -150%)
+}
+
+.center3 {
+    vertical-align: middle;
+    transform: translate(-30%, -30%)
+}
+
+.contactButton {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    padding: 6px 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Comfortaa;
+    font-size: 12px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.contactButton:hover {
+    background-color: #555555;
+    color: white;
+}
+

@@ -1,24 +1,20 @@
-.logo{
-    height: 3em;
-    // width: 3em;
+.logo {
+  height: 3em;
 }
 .example-spacer {
-    flex: 1 1 auto;
-  }
-  .border{
-    border-right:solid 2px;
-
-  }
-  .left{
+  flex: 1 1 auto;
+}
+.border {
+  border-right: solid 2px;
+}
+.left {
   display: inline-block;
   margin: 1px;
   border-right: 1px black solid;
   color: rgb(48, 96, 226);
 }
-.right{
-  display: inline-block; 
-  font-family: 'Comfortaa', cursive;
+.right {
+  display: inline-block;
+  font-family: "Comfortaa", cursive;
   color: rgb(48, 96, 226);
-
-  
 }
