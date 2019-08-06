@@ -1,30 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-        <header>
-                <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
-             
-                <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Bungee+Outline|Montserrat&display=swap" rel="stylesheet">
-                <mat-toolbar>
+  <header>
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap"
+      rel="stylesheet"
+    />
 
-                        <span class="example-spacer"></span>
-                        <div  align="end"   *ngFor = 'let nav of nav'>
-                            <a class="left right" (click)='navTo(nav)' >  <u>{{nav.name}}</u>  </a>   
-                        </div>
-                </mat-toolbar>
-            </header>
-<body class="background">
-    <!-- <nav>
-            <div  align="end">
-                    <button mat-button class="left right"  (click)=login()>Login  </button>
-                    <button mat-button  class="left right" (click)=register()>  Create an Account  </button>
-                    <button mat-button class="left right"  routerlink=".">  Browse  </button>
-            </div>
-    </nav> -->
-    <img class="welcome" src='assets/dotsLogo.JPG'/>
-
-
-    <!-- <img src="/Users/christinacampbell/Desktop/ixperience/internship/hyh1/src/assets/hyhlogo.png" /> -->
-
-</body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Bungee+Inline|Bungee+Outline|Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <mat-toolbar>
+      <span class="example-spacer"></span>
+      <div align="end" *ngFor="let nav of nav">
+        <a class="left right" (click)="navTo(nav)">
+          <u>{{ nav.name }}</u>
+        </a>
+      </div>
+    </mat-toolbar>
+  </header>
+  <body class="background">
+    <img class="welcome" src="assets/dotsLogo.JPG" />
+  </body>
 </html>
-

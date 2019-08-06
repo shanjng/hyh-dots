@@ -1,8 +1,4 @@
-// html{
-//   background-color: #000;
-// }
-
-.welcome{
+.welcome {
   height: 60%;
   margin: 0;
   position: absolute;
@@ -11,28 +7,22 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.left{
+.left {
   display: inline-block;
   margin: 1px;
   border-right: 1px black solid;
   color: rgb(48, 96, 226);
 }
-.right{
-  display: inline-block; 
-  font-family: 'Comfortaa', cursive;
+.right {
+  display: inline-block;
+  font-family: "Comfortaa", cursive;
   color: rgb(48, 96, 226);
-
-  
 }
 
 .example-spacer {
   flex: 1 1 auto;
 }
 
-// .right{
-//   font-family: 'Comfortaa', cursive;
-// }
-.border{
-  border-right:solid 2px;
-
+.border {
+  border-right: solid 2px;
 }

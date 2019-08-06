@@ -1,74 +1,37 @@
-
-// html{
-//   background-image:  'assets/background.JPG' 
-
-// }
-.signIn{
+.signIn {
   font-size: 600%;
   text-align: center;
   position: relative;
-  top:20px;
+  top: 20px;
 }
-.title{
+.title {
   position: relative;
-  top:20px;
+  top: 20px;
 }
-.inputs-button{
-position: relative;
-left: 3px;
+.inputs-button {
+  position: relative;
+  left: 3px;
 }
-.background{
-    height: 15em;
-    width: 23em;
-    position: relative;
-    left: 150px;
-    bottom: 100px;
-    transform:rotate(-25deg);
-    float:left;
-
-    // margin-right: 500px;
-    // margin-bottom: 200px;
-
+.background {
+  height: 15em;
+  width: 23em;
+  position: relative;
+  left: 150px;
+  bottom: 100px;
+  transform: rotate(-25deg);
+  float: left;
 }
-.background2{
+.background2 {
   height: 15em;
   width: 15em;
-  // position: relative;
   right: 60px;
   bottom: 100px;
-  transform:rotate(157deg);
-  float:left;
-
-  // margin-right: 500px;
-  // margin-bottom: 200px;
-
+  transform: rotate(157deg);
+  float: left;
 }
-// .column {
-//   float: left;
-//   // width: 33.33%;
-//   padding: 5px;
-//   position: relative;
-//   top: 100px;
 
-
-  
-// }
-.column{
+.column {
   display: table;
   position: relative;
   right: 50px;
 }
-
-// /* Clearfix (clear floats) */
-// .row::after {
-//   content: "";
-//   clear: both;
-//   display: table;
-// }
-
-
-
-
-
-
-
