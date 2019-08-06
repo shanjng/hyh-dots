@@ -67,6 +67,9 @@ export class BrowseComponent implements OnInit {
       .catch(err => {
         console.log("err fetching users from api for browse component: ", err);
       });
+      if (this.users.length==0){
+        
+      }
   }
   filterUsers(){
     // this.filters.length=0;

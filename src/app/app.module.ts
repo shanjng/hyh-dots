@@ -21,6 +21,7 @@ import { MatGridListModule } from "@angular/material/grid-list";
 import { AboutComponent } from "./components/about/about.component";
 import { HelpComponent } from "./components/help/help.component";
 import { FaqComponent } from "./components/faq/faq.component";
+import { AlertsModule } from 'angular-alert-module';
 
 import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -60,7 +61,9 @@ import { TopmatchesComponent } from './components/topmatches/topmatches.componen
     FlexLayoutModule,
     MatGridListModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    AlertsModule.forRoot()
+
   ],
   providers: [],
   bootstrap: [AppComponent],
