@@ -1,8 +1,11 @@
-.signIn {
+
+
+.signIn{
   font-size: 600%;
   text-align: center;
-  position: relative;
-  top: 20px;
+  position: absolute;
+
+  left: 45%;
 }
 .title {
   position: relative;
@@ -12,26 +15,39 @@
   position: relative;
   left: 3px;
 }
-.background {
-  height: 15em;
-  width: 23em;
-  position: relative;
-  left: 150px;
-  bottom: 100px;
-  transform: rotate(-25deg);
-  float: left;
+.background{
+  position: absolute;
+  left:15%;
+  top: 400%;
+  z-index: -1;
+  transform:rotate(-15deg);
+
+
 }
-.background2 {
-  height: 15em;
-  width: 15em;
-  right: 60px;
-  bottom: 100px;
-  transform: rotate(157deg);
-  float: left;
+.background2{
+height: 16em;
+width: 20em;
+position: absolute;
+z-index: -1;
+left:50%;
+transform:rotate(190deg);
+
+
 }
 
-.column {
+
+  
+
+.column{
   display: table;
-  position: relative;
-  right: 50px;
+  position: absolute;
+  right: 40%;
 }
+
+
+
+
+
+
+
+

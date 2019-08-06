@@ -16,6 +16,7 @@
     <a href="nav/browse" style="font-family: Comfortaa"> < Back to Browse</a><br>
     <h1 style="color: rgb(79, 145, 245)">{{twitterUser.name}}'s Profile</h1>
     <mat-tab-group>
+        <!-- Below is the first tab, displaying data from Twitter. -->
         <mat-tab label="Twitter">
             <br>
             <div>
@@ -39,9 +40,11 @@
                             <h4>ER</h4>
                         </div> &nbsp;
                         <div class="inline-block-child">
-                            <i class="far fa-question-circle"></i>
+                            <i title="This engagement rate has been calculated by dividing the total number of favorites and retweets of a randomly selected tweet by the total number of followers." class="far fa-question-circle"></i>
                         </div>
-                        <h1>9.7%</h1>
+                        <h1>{{((twitterUser.status.favorite_count + twitterUser.status.retweet_count) / twitterUser.followers_count) * 100}}%</h1>
+                        <hr>
+                        <p>Total # of posts: {{twitterUser.statuses_count}}</p>
                     </div>
                 </div>
                 <hr>
@@ -85,5 +88,8 @@
                 </div>
             </div>
         </mat-tab>
+        <!-- Create more tabs for Instagram, Facebook, etc. here.
+            Copy and paste the above code within <mat-tab></mat-tab>,
+            changing "twitterUser" as needed. -->
     </mat-tab-group>
 </body>
