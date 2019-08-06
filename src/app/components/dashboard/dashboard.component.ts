@@ -13,7 +13,8 @@ import { Router } from "@angular/router";
 export class DashboardComponent implements OnInit {
   public user = new User();
   public twitterUser = new TwitterUser();
-  
+  // rate : number;
+
   constructor(
     private userService: UserService,
     private router: Router
@@ -24,6 +25,7 @@ export class DashboardComponent implements OnInit {
       this.getById();
       
       this.twitterUser = JSON.parse(localStorage.getItem('twitterUser'));
+      // this.rate = ((this.twitterUser.status.favorite_count + this.twitterUser.status.retweet_count) / this.twitterUser.followers_count) * 100
         }
     
 
@@ -50,4 +52,7 @@ export class DashboardComponent implements OnInit {
         console.log(err);
       });
   }
+
+
+  
 }

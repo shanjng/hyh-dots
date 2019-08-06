@@ -166,8 +166,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">src/app/services/auth.service.ts:11</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="12"
+                            class="link-to-prism">src/app/services/auth.service.ts:12</a></div>
                 </td>
             </tr>
 
@@ -226,11 +226,11 @@ import { environment } from &quot;../../environments/environment.prod&quot;;
 export class AuthService {
   constructor(private http: HttpClient) {}
 
+  //calls api to log in user
   login(authUser) {
     return new Promise((resolve, reject) &#x3D;&gt; {
       console.log(&quot;Authuser: &quot;, authUser);
 
-      // headers: key value pairs for metadata
       const headers &#x3D; new HttpHeaders();
 
       this.http

@@ -184,7 +184,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/browse/browse.component.ts:30</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/browse/browse.component.ts:34</a></div>
                             </td>
                         </tr>
 
@@ -277,8 +277,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="45"
-                            class="link-to-prism">src/app/components/browse/browse.component.ts:45</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">src/app/components/browse/browse.component.ts:49</a></div>
                 </td>
             </tr>
 
@@ -318,8 +318,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="19"
-                            class="link-to-prism">src/app/components/browse/browse.component.ts:19</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/app/components/browse/browse.component.ts:20</a></div>
                 </td>
             </tr>
 
@@ -504,6 +504,7 @@ export class BrowseComponent implements OnInit {
   filters: any[];
   selectedUser: TwitterUser;
 
+  //grabs user from selected card and saves to local storage
   async onSelect(user: TwitterUser): Promise&lt;void&gt; {
     this.selectedUser &#x3D; user;
 
@@ -512,9 +513,12 @@ export class BrowseComponent implements OnInit {
       JSON.stringify(this.selectedUser)
     );
 
-    await localStorage.setItem(&quot;twitterUser&quot;,JSON.stringify(this.selectedUser));
-    
-    this.router.navigate([&#x27;nav/dashboard&#x27;])
+    await localStorage.setItem(
+      &quot;twitterUser&quot;,
+      JSON.stringify(this.selectedUser)
+    );
+
+    this.router.navigate([&quot;nav/dashboard&quot;]);
   }
 
   constructor(
@@ -531,6 +535,7 @@ export class BrowseComponent implements OnInit {
   }
 
   ngOnInit() {
+    //navigation
     if (localStorage.getItem(&quot;nav&quot;) &#x3D;&#x3D;&#x3D; &quot;true&quot;) {
       this.navService
         .reloadNav()
@@ -541,6 +546,7 @@ export class BrowseComponent implements OnInit {
           console.log(err);
         });
     }
+    //grabs users from api for browser
     this.userService
       .getUsers(this.filters[0])
       .then(res &#x3D;&gt; {

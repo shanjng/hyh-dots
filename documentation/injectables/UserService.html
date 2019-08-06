@@ -175,8 +175,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">src/app/services/user.service.ts:11</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="12"
+                            class="link-to-prism">src/app/services/user.service.ts:12</a></div>
                 </td>
             </tr>
 
@@ -214,8 +214,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">src/app/services/user.service.ts:48</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">src/app/services/user.service.ts:54</a></div>
                 </td>
             </tr>
 
@@ -280,8 +280,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">src/app/services/user.service.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/services/user.service.ts:26</a></div>
                 </td>
             </tr>
 
@@ -346,8 +346,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="38"
-                            class="link-to-prism">src/app/services/user.service.ts:38</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/services/user.service.ts:43</a></div>
                 </td>
             </tr>
 
@@ -406,6 +406,7 @@ import { environment } from &quot;../../environments/environment.prod&quot;;
 export class UserService {
   constructor(private http: HttpClient) {}
 
+  //get all users from test data DEPRICATED
   getAll() {
     return new Promise((resolve, reject) &#x3D;&gt; {
       this.http.get(environment.BaseURL + &quot;/api/user/get&quot;).subscribe(
@@ -418,6 +419,8 @@ export class UserService {
       );
     });
   }
+
+  //get all twitter users from api
   getUsers(filters) {
     return new Promise((resolve, reject) &#x3D;&gt; {
       const headers &#x3D; new HttpHeaders();
@@ -433,6 +436,8 @@ export class UserService {
         );
     });
   }
+
+  //change web app user details from api DEPRICATED
   updateUser(user) {
     return new Promise((resolve, reject) &#x3D;&gt; {
       this.http
@@ -443,6 +448,7 @@ export class UserService {
     });
   }
 
+  //get twitter user by ID from api
   getById(id) {
     return new Promise((resolve, reject)&#x3D;&gt; {
       this.http.get(environment.BaseURL + &#x27;/users/&#x27; + id)
