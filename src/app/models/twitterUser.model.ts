@@ -8,7 +8,5 @@ export class TwitterUser {
   public profile_image_url: string;
   public followers_count: number;
   public friends_count: number;
-  public statuses_count: number;
-  public retweet_count: number;
-  public favorite_count: number;
+  public status: JSON;
 }
