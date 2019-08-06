@@ -10,12 +10,8 @@ export class NavService {
     {name: "  Browse  ", path:'nav/browse'},
     {name: "  myDashboard  ", path:'nav/myDashboard'},
     {name: "  Help  ", path:'nav/help'},
-    {name: "  Logout  ", path:''}
+    {name: "  Logout  ", path:'nav/login'}
   ];
-
-
-
-  
 
   constructor(router: Router) { }
 

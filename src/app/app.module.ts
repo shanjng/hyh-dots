@@ -17,6 +17,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { AboutComponent } from './components/about/about.component';
 import { HelpComponent } from './components/help/help.component';
@@ -26,6 +27,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
 import { EditprofileComponent } from './components/editprofile/editprofile.component';
+
+import { CookieService } from 'ngx-cookie-service';
+
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
@@ -54,7 +59,9 @@ import { EditprofileComponent } from './components/editprofile/editprofile.compo
     FlexLayoutModule,
     MatGridListModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    MDBBootstrapModule.forRoot(),
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent],

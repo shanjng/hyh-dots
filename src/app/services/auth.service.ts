@@ -13,11 +13,12 @@ export class AuthService {
 
   login(authUser) {
     return new Promise((resolve, reject) => {
+      console.log("Authuser: ", authUser)
       
       // headers: key value pairs for metadata 
       const headers = new HttpHeaders();
 
-      this.http.post('http://localhost:5000' + "/api/auth/login", authUser, { headers }).subscribe(
+      this.http.post(environment.BaseURL + "/api/auth/login", authUser, { headers }).subscribe(
         (response: any) => {
           console.log("response: ", response)
         localStorage.setItem("userid", response.id);

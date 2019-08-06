@@ -28,10 +28,10 @@ export class UserService {
   getUsers(filters){
     return new Promise((resolve, reject) => {
       const headers = new HttpHeaders();
-      this.http.post('http://localhost:5000/users/users', filters, {headers})
+      this.http.post(environment.BaseURL + '/users/users', filters, {headers})
       .subscribe(response =>{
         //localStorage.setItem('userid', response);
-        console.log(response);
+        // console.log(response);
         resolve(response);
       },
       (err)=> {
@@ -45,7 +45,7 @@ export class UserService {
   updateUser(user) {
     return new Promise((resolve, reject) => {
       this.http
-        .patch(`http://localhost:5000/api/user/edit/`, user)
+        .patch(environment.BaseURL + '/api/user/edit/', user)
         .subscribe((response)=>{
           resolve(response)
         })
@@ -54,7 +54,7 @@ export class UserService {
 
   getById(id) {
     return new Promise((resolve, reject)=> {
-      this.http.get('http://localhost:5000' + '/api/user/' + id)
+      this.http.get(environment.BaseURL + '/api/user/' + id)
       .subscribe(
         (response: any)=>{
           resolve(response)

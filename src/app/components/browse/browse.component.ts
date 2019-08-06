@@ -17,6 +17,7 @@ export class BrowseComponent implements OnInit {
   filters: any[];
 
   selectedUser: TwitterUser;
+
   onSelect(user: TwitterUser): void {
 
     this.selectedUser = user;
@@ -32,10 +33,9 @@ export class BrowseComponent implements OnInit {
     private userService: UserService,
     private router: Router
   ) {
-
-    this.filters = [
+    this.filters=[
       {
-        topic: "fitness",
+        topic: "",
         count: 10000
       }
     ]
@@ -52,14 +52,12 @@ export class BrowseComponent implements OnInit {
           console.log(err);
         });
     }
-    this.userService
-      .getUsers(this.filters[0])
-      .then(res => {
-        console.log(res);
+      this.userService.getUsers(this.filters[0]).then(res=>{
+        // console.log(res);
         this.users = res;
       })
       .catch(err => {
-        console.log(err);
+        console.log("err in browse component: ", err);
       });
   }
 }
