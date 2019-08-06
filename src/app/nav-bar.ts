@@ -15,7 +15,11 @@ export class NavBar {
     ];
 
     public filters: Array<any> =[
-      { topic: ""}
+      { topic: undefined,
+        count: undefined,
+         location: undefined,
+          verified: undefined
+      }
     ];
 
 }

@@ -1,3 +1,18 @@
+.industry-radio-group {
+  flex-direction: column;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+  
+  mat-card{
+      border-style: double ;
+      border-width: thick;
+      border-color: rgb(48, 96, 226);
+      
+    }
+    mat-grid-list{
+        margin: 10px;
+    }
 mat-card {
   border-style: double;
   border-width: thick;
