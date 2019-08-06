@@ -13,13 +13,9 @@ export class NavBar {
       {name: "Help", path: "/help"},
       {name: "Logout", path: "/login"}
     ];
-    set nav(list){
-        this.navItems=list;
-        console.log({"set":this.navItems});
-        
-      }
-      get nav(){
-        console.log({"get":this.navItems});
-        return this.navItems;
-      }
+
+    public filters: Array<any> =[
+      { topic: ""}
+    ];
+
 }

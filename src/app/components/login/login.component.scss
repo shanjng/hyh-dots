@@ -6,12 +6,16 @@
 .signIn{
     font-size: 600%;
     text-align: center;
-    position: relative;
-    top:20px;
+    position: absolute;
+
+    left: 45%;
   }
   .title{
-    position: relative;
+    position: absolute;
+    display: inline-block;
+
     top:20px;
+    left: 50%;
   }
   .inputs-button{
     position: relative;
@@ -20,23 +24,29 @@
 
   }
   .background{
-      height: 15em;
-      width: 23em;
-      position: relative;
-      left: 150px;
-      bottom: 100px;
-      transform:rotate(-25deg);
+      // height: 30%;
+      // width: 30%;
+      position: absolute;
+      left:15%;
+      top: 400%;
+      z-index: -1;
+
+      // top: 100%;
+      transform:rotate(-15deg);
       // margin-right: 500px;
       // margin-bottom: 200px;
 
   }
   .background2{
-    height: 15em;
-    width: 15em;
-    // position: relative;
-    right: 60px;
-    bottom: 100px;
-    transform:rotate(157deg);
+    height: 16em;
+    width: 18em;
+    position: absolute;
+    z-index: -1;
+    left:50%;
+
+    // right: 40%;
+    // bottom: 625%;
+    transform:rotate(180deg);
     // margin-right: 500px;
     // margin-bottom: 200px;
 
@@ -53,8 +63,8 @@
   // }
   .column{
     display: table;
-    position: relative;
-    right: 50px;
+    position: absolute;
+    right: 40%;
   }
   
   // /* Clearfix (clear floats) */

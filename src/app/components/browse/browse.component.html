@@ -4,6 +4,8 @@ rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 />
 
+<button (click)=filterUsers()>filter</button>
+
 <!--TODO update user endpoints-->
     <ul class="users">
       <li *ngFor="let user of users" (click)="onSelect(user)">
