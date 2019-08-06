@@ -1,231 +1,265 @@
 <head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa" />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="//fonts.googleapis.com/css?family=Comfortaa"
+  />
 </head>
 
 <body>
-    <a href="#browse" style="font-family: Comfortaa"> < Back to Browse</a><br>
-    <a href="nav/editprofile" style="font-family: Comfortaa">EDIT PROFILE</a>
-    <h1 style="color: rgb(79, 145, 245)">{{user.name}}'s Profile</h1>
-    <mat-tab-group>
-        <mat-tab label="myDOTS">
-            <br>
-            <div>
-                <div class="row">
-                    <div class="biocol1 center">
-                        <img class="face" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Avatar" style="width:200px"><br>
-                        <button type="button" class="contactButton">Message</button>
-                    </div>
-                    &nbsp;
-                    <div class="biocol2">
-                        <br><p></p>
-                        <h3>@{{user.username}}</h3><br><p></p>
-                        <h1>{{user.name}}</h1><br><p></p>
-                        <p>{{user.industry}}</p>
-                    </div>
-                    <div class="biocol3 center">
-                        <br><p></p>
-                        <div class="parent">
-                            <i class="fas fa-map-marker-alt inline-block-child"></i> &nbsp;
-                            <h3>{{user.location}}</h3>
-                        </div>
-                        <div class="parent">
-                            <div class="inline-block-child">
-                                <h3>{{user.ethnicity}}</h3>
-                            </div>
-                            <div class="inline-block-child">
-                                <h3>{{user.gender}}</h3>
-                            </div>
-                            <div class="inline-block-child">
-                                <p>{{user.age}} years old</p>
-                            </div>
-                        </div>
-                        <div class="parent">
-                            <div class="inline-block-child">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="inline-block-child">
-                                <p>{{user.phone}}</p>
-                            </div> &nbsp;
-                            <div class="inline-block-child">
-                                <i class="fas fa-envelope"></i> 
-                            </div>
-                            <div class="inline-block-child">
-                                    <p>{{user.email}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="row2col1">
-                        <h2>Bio</h2>
-                        <p>{{user.bio}}</p>
-                    </div>
-                </div>
+  <a href="#browse" style="font-family: Comfortaa"> < Back to Browse</a><br />
+  <a href="nav/editprofile" style="font-family: Comfortaa">EDIT PROFILE</a>
+  <h1 style="color: rgb(79, 145, 245)">{{ user.name }}'s Profile</h1>
+  <mat-tab-group>
+    <mat-tab label="myDOTS">
+      <br />
+      <div>
+        <div class="row">
+          <div class="biocol1 center">
+            <img
+              class="face"
+              src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+              alt="Avatar"
+              style="width:200px"
+            /><br />
+            <button type="button" class="contactButton">Message</button>
+          </div>
+          &nbsp;
+          <div class="biocol2">
+            <br />
+            <p></p>
+            <h3>@{{ user.username }}</h3>
+            <br />
+            <p></p>
+            <h1>{{ user.name }}</h1>
+            <br />
+            <p></p>
+            <p>{{ user.industry }}</p>
+          </div>
+          <div class="biocol3 center">
+            <br />
+            <p></p>
+            <div class="parent">
+              <i class="fas fa-map-marker-alt inline-block-child"></i> &nbsp;
+              <h3>{{ user.location }}</h3>
             </div>
-        </mat-tab>
-        <mat-tab label="Twitter">
-            <br>
-            <div>
-                <div class="row">
-                    <div class="biocol1 center">
-                        <img class="face" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Avatar" style="width:200px"><br>
-                        <button type="button" class="contactButton">Message</button>
-                    </div>
-                    <div class="biocol2">
-                        <h3>@{{twitterUser.screen_name}}</h3>
-                        <h1>{{twitterUser.name}}</h1>
-                    </div>
-                    <div class="biocol4">
-                        <h4>Followers</h4>
-                        <h1>{{twitterUser.followers_count}}</h1>
-                        <h4>Following</h4>
-                        <h1>{{twitterUser.friends_count}}</h1>
-                        <div class="inline-block-child">
-                            <h4>ER</h4>
-                        </div> &nbsp;
-                        <div class="inline-block-child">
-                            <i class="far fa-question-circle"></i>
-                        </div>
-                        <h1>9.7%</h1>
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="row2col1">
-                        <h2>Latest Posts</h2>
-                        <p>*embed posts from twitter?</p>
-                    </div>
-                    <div class="row2col2">
-                        <h2>Bio</h2>
-                        <p>Lorem ispum</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="row3col">
-                        <h2># of Posts Last Month</h2>
-                        <p>*graph</p>
-                    </div>
-                    <div class="row3col">
-                        <h2>Most Used Hashtag</h2>
-                        <p>*graph</p>
-                    </div>
-                    <div class="row3col">
-                        <h2>Audience Type</h2>
-                        <p>*graph</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="row3col">
-                        <h2>Follower Growth</h2>
-                        <p>*graph</p>
-                    </div>
-                    <div class="row3col">
-                        <h2>Popularity by Month</h2>
-                        <p>*graph</p>
-                    </div>
-                    <div class="row3col">
-                        <h2>Audience Ethnicity</h2>
-                        <p>*graph</p>
-                    </div>
-                </div>
+            <div class="parent">
+              <div class="inline-block-child">
+                <h3>{{ user.ethnicity }}</h3>
+              </div>
+              <div class="inline-block-child">
+                <h3>{{ user.gender }}</h3>
+              </div>
+              <div class="inline-block-child">
+                <p>{{ user.age }} years old</p>
+              </div>
             </div>
-        </mat-tab>
-        <mat-tab label="Instagram">
-            <br>
-            <div>
-                <div class="row">
-                    <div class="biocol1 center">
-                        <img class="face" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Avatar" style="width:200px"><br>
-                        <button type="button" class="contactButton">Message</button>
-                    </div>
-                    <div class="biocol2">
-                        <h3>@username</h3>
-                        <h1>Jason Stewart</h1>
-                        <div class="parent">
-                            <div class="cardcol">
-                                <p>Food</p>
-                            </div>
-                            <div class="cardcol">
-                                <p>Travel</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="biocol3 center">
-                        <div class="parent">
-                            <i class="fas fa-map-marker-alt inline-block-child"></i> &nbsp;
-                            <h3 class="inline-block-child">Cape Town, South Africa</h3>
-                        </div>
-                        <div>
-                            <h3>Caucasian, Male, 27 years old</h3>
-                        </div>
-                        <div class="parent">
-                            <div class="inline-block-child">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="inline-block-child">
-                                <h3>phone</h3>
-                            </div> &nbsp;
-                            <div class="inline-block-child">
-                                <i class="fas fa-envelope"></i> 
-                            </div>
-                            <div class="inline-block-child">
-                                <h3>email</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="biocol4">
-                        <h4>Followers</h4>
-                        <h1>100k</h1>
-                        <div class="inline-block-child">
-                            <h4>ER</h4>
-                        </div> &nbsp;
-                        <div class="inline-block-child">
-                            <i class="far fa-question-circle"></i>
-                        </div>
-                        <h1>9.7%</h1>
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="row2col1">
-                        <h2>Latest Posts</h2>
-                        <p>*embed posts from insta?</p>
-                    </div>
-                    <div class="row2col2">
-                        <h2>Bio</h2>
-                        <p>Lorem ispum</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="row3col">
-                        <h2># of Posts Last Month</h2>
-                        <p>*graph</p>
-                    </div>
-                    <div class="row3col">
-                        <h2>Most Used Hashtag</h2>
-                        <p>*graph</p>
-                    </div>
-                    <div class="row3col">
-                        <h2>Audience Type</h2>
-                        <p>*graph</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="row3col">
-                        <h2>Follower Growth</h2>
-                        <p>*graph</p>
-                    </div>
-                    <div class="row3col">
-                        <h2>Popularity by Month</h2>
-                        <p>*graph</p>
-                    </div>
-                    <div class="row3col">
-                        <h2>Audience Ethnicity</h2>
-                        <p>*graph</p>
-                    </div>
-                </div>
+            <div class="parent">
+              <div class="inline-block-child">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="inline-block-child">
+                <p>{{ user.phone }}</p>
+              </div>
+              &nbsp;
+              <div class="inline-block-child">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="inline-block-child">
+                <p>{{ user.email }}</p>
+              </div>
             </div>
-        </mat-tab>
-    </mat-tab-group>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row2col1">
+            <h2>Bio</h2>
+            <p>{{ user.bio }}</p>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Twitter">
+      <br />
+      <div>
+        <div class="row">
+          <div class="biocol1 center">
+            <img
+              class="face"
+              src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+              alt="Avatar"
+              style="width:200px"
+            /><br />
+            <button type="button" class="contactButton">Message</button>
+          </div>
+          <div class="biocol2">
+            <h3>@{{ twitterUser.screen_name }}</h3>
+            <h1>{{ twitterUser.name }}</h1>
+          </div>
+          <div class="biocol4">
+            <h4>Followers</h4>
+            <h1>{{ twitterUser.followers_count }}</h1>
+            <h4>Following</h4>
+            <h1>{{ twitterUser.friends_count }}</h1>
+            <div class="inline-block-child">
+              <h4>ER</h4>
+            </div>
+            &nbsp;
+            <div class="inline-block-child">
+              <i class="far fa-question-circle"></i>
+            </div>
+            <h1>9.7%</h1>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="row2col1">
+            <h2>Latest Posts</h2>
+            <p>*embed posts from twitter?</p>
+          </div>
+          <div class="row2col2">
+            <h2>Bio</h2>
+            <p>Lorem ispum</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row3col">
+            <h2># of Posts Last Month</h2>
+            <p>*graph</p>
+          </div>
+          <div class="row3col">
+            <h2>Most Used Hashtag</h2>
+            <p>*graph</p>
+          </div>
+          <div class="row3col">
+            <h2>Audience Type</h2>
+            <p>*graph</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row3col">
+            <h2>Follower Growth</h2>
+            <p>*graph</p>
+          </div>
+          <div class="row3col">
+            <h2>Popularity by Month</h2>
+            <p>*graph</p>
+          </div>
+          <div class="row3col">
+            <h2>Audience Ethnicity</h2>
+            <p>*graph</p>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Instagram">
+      <br />
+      <div>
+        <div class="row">
+          <div class="biocol1 center">
+            <img
+              class="face"
+              src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+              alt="Avatar"
+              style="width:200px"
+            /><br />
+            <button type="button" class="contactButton">Message</button>
+          </div>
+          <div class="biocol2">
+            <h3>@username</h3>
+            <h1>Jason Stewart</h1>
+            <div class="parent">
+              <div class="cardcol">
+                <p>Food</p>
+              </div>
+              <div class="cardcol">
+                <p>Travel</p>
+              </div>
+            </div>
+          </div>
+          <div class="biocol3 center">
+            <div class="parent">
+              <i class="fas fa-map-marker-alt inline-block-child"></i> &nbsp;
+              <h3 class="inline-block-child">Cape Town, South Africa</h3>
+            </div>
+            <div>
+              <h3>Caucasian, Male, 27 years old</h3>
+            </div>
+            <div class="parent">
+              <div class="inline-block-child">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="inline-block-child">
+                <h3>phone</h3>
+              </div>
+              &nbsp;
+              <div class="inline-block-child">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="inline-block-child">
+                <h3>email</h3>
+              </div>
+            </div>
+          </div>
+          <div class="biocol4">
+            <h4>Followers</h4>
+            <h1>100k</h1>
+            <div class="inline-block-child">
+              <h4>ER</h4>
+            </div>
+            &nbsp;
+            <div class="inline-block-child">
+              <i class="far fa-question-circle"></i>
+            </div>
+            <h1>9.7%</h1>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="row2col1">
+            <h2>Latest Posts</h2>
+            <p>*embed posts from insta?</p>
+          </div>
+          <div class="row2col2">
+            <h2>Bio</h2>
+            <p>Lorem ispum</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row3col">
+            <h2># of Posts Last Month</h2>
+            <p>*graph</p>
+          </div>
+          <div class="row3col">
+            <h2>Most Used Hashtag</h2>
+            <p>*graph</p>
+          </div>
+          <div class="row3col">
+            <h2>Audience Type</h2>
+            <p>*graph</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row3col">
+            <h2>Follower Growth</h2>
+            <p>*graph</p>
+          </div>
+          <div class="row3col">
+            <h2>Popularity by Month</h2>
+            <p>*graph</p>
+          </div>
+          <div class="row3col">
+            <h2>Audience Ethnicity</h2>
+            <p>*graph</p>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
 </body>

@@ -3,7 +3,7 @@ import { NavService } from "../../services/nav.service";
 import { NavBar } from "../../nav-bar";
 import { UserService } from "../../services/user.service";
 import { TwitterUser } from "../../models/twitterUser.model";
-import { Router } from '@angular/router';
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-browse",
@@ -12,19 +12,19 @@ import { Router } from '@angular/router';
 })
 export class BrowseComponent implements OnInit {
   public navBar = new NavBar();
-  //public twitterUser = new TwitterUser();
   users: any;
   filters: any[];
   selectedUser: TwitterUser;
 
- async onSelect(user: TwitterUser): Promise<void> {
-
+  async onSelect(user: TwitterUser): Promise<void> {
     this.selectedUser = user;
 
+    await localStorage.setItem(
+      "twitterUser",
+      JSON.stringify(this.selectedUser)
+    );
 
-    await localStorage.setItem("twitterUser",JSON.stringify(this.selectedUser));
-    
-    this.router.navigate(['nav/myDashboard'])
+    this.router.navigate(["nav/myDashboard"]);
   }
 
   constructor(
@@ -32,12 +32,12 @@ export class BrowseComponent implements OnInit {
     private userService: UserService,
     private router: Router
   ) {
-    this.filters=[
+    this.filters = [
       {
         topic: "",
         count: 10000
       }
-    ]
+    ];
   }
 
   ngOnInit() {
@@ -51,12 +51,13 @@ export class BrowseComponent implements OnInit {
           console.log(err);
         });
     }
-      this.userService.getUsers(this.filters[0]).then(res=>{
-        // console.log(res);
+    this.userService
+      .getUsers(this.filters[0])
+      .then(res => {
         this.users = res;
       })
       .catch(err => {
-        console.log("err in browse component: ", err);
+        console.log("err fetching users from api for browse component: ", err);
       });
   }
 }
