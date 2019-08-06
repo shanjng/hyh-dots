@@ -3,6 +3,7 @@ import { NavService } from "../../services/nav.service";
 import { NavBar } from "../../nav-bar";
 import { UserService } from "../../services/user.service";
 import { TwitterUser } from "../../models/twitterUser.model";
+import { toBase64String } from '@angular/compiler/src/output/source_map';
 import { Router } from "@angular/router";
 
 @Component({
@@ -14,6 +15,7 @@ export class BrowseComponent implements OnInit {
   public navBar = new NavBar();
   users: any;
   filters: any[];
+
   selectedUser: TwitterUser;
 
   //grabs user from selected card and saves to local storage
@@ -58,14 +60,25 @@ export class BrowseComponent implements OnInit {
           console.log(err);
         });
     }
-    //grabs users from api for browser
-    this.userService
-      .getUsers(this.filters[0])
-      .then(res => {
+    console.log(this.navBar.filters)
+    this.userService.getUsers(this.navBar.filters[this.navBar.filters.length-1]).then(res => {
+        console.log(res);
         this.users = res;
       })
       .catch(err => {
         console.log("err fetching users from api for browse component: ", err);
       });
+  }
+  filterUsers(){
+    // this.filters.length=0;
+    // console.log(this.filters);
+    this.navBar.filters.push({
+      "topic": "food",
+      "count": [100000,1000000]
+    
+    });
+    console.log(this.navBar.filters);
+    localStorage.setItem("click","true");
+    this.ngOnInit();
   }
 }

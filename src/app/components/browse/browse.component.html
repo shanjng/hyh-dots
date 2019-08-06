@@ -2,6 +2,84 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 />
+
+<button mdbBtn color="primary" class="waves-light" type="button" (click)="test.toggle()" mdbWavesEffect>
+  Filter
+</button>
+
+<div class="" mdbCollapse #test="bs-collapse">
+  <mat-grid-list cols="4" rowHeight="210" layout-align = "center start">
+    <mat-grid-tile
+    [colspan]="1">
+
+      <form name="industry">
+        <legend>Industry</legend>
+        <input type="radio" name="industry" value="Banking"> Banking<br>
+        <input type="radio" name="industry" value="Beauty"> Beauty<br>
+        <input type="radio" name="industry" value="Fashion"> Fashion<br>  
+        <input type="radio" name="industry" value="Fitness"> Fitness<br>
+        <input type="radio" name="industry" value="Food/Alcohol"> Food/Alcohol<br>
+        <input type="radio" name="industry" value="LifeStyle"> LifeStyle<br>
+        <input type="radio" name="industry" value="Sports"> Sports<br> 
+      
+        <!-- <input type="submit" value="Submit"> -->
+      </form>
+
+    </mat-grid-tile>
+
+    <mat-grid-tile
+    [colspan]="1">
+
+      <form name="location">
+        <legend>Location</legend>
+        <input type="radio" name="location" value="New York City"> New York City<br>
+        <input type="radio" name="location" value="Los Angeles"> Los Angeles<br>
+        <input type="radio" name="location" value="London"> London<br>  
+        <input type="radio" name="location" value="Paris"> Paris<br> 
+      
+        <!-- <input type="submit" value="Submit"> -->
+      </form>
+
+    </mat-grid-tile>
+    <mat-grid-tile
+    [colspan]="1">
+
+      <form name="followers">
+        <legend>Followers</legend>
+        <input type="radio" name="followers" value="<10000"> &lt;10,000<br>
+        <input type="radio" name="followers" value="10000-50000"> 10,000-50,000<br>
+        <input type="radio" name="followers" value="50000-100000"> 50,000-100,000<br>  
+        <input type="radio" name="followers" value="100000+"> 100,000+<br>
+      
+        <!-- <input type="submit" value="Submit"> -->
+      </form>
+
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <form>
+        <Legend>Tags</Legend>
+        <input type="text" name="tags">  
+      </form>
+    </mat-grid-tile>
+
+  </mat-grid-list> 
+
+</div>
+
+<!--TODO update user endpoints-->
+    <ul class="users">
+      <li *ngFor="let user of users" (click)="onSelect(user)">
+        <div class="card">
+          <div class="imgBox">
+          <img src={{user.profile_image_url}} alt={{user.screen_name}}/>
+        </div>
+          <h1 class="name">{{user.name}}</h1>
+          <p class="title">{{user.location}} </p>
+          <a href="https://twitter.com/{{user.screen_name}}"><i class="fa fa-twitter"></i></a>
+        </div>
+      </li>
+    </ul>
 <ul class="users">
   <li *ngFor="let user of users" (click)="onSelect(user)">
     <div class="card">

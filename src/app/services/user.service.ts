@@ -1,6 +1,6 @@
-import { Injectable } from "@angular/core";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { environment } from "../../environments/environment.prod";
+import { Injectable } from '@angular/core'; 
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from "../../environments/environment"
 
 @Injectable({
   providedIn: "root"
@@ -23,23 +23,20 @@ export class UserService {
   }
 
   //get all twitter users from api
-  getUsers(filters) {
+
+  getUsers(filters){
     return new Promise((resolve, reject) => {
       const headers = new HttpHeaders();
-      this.http
-        .post(environment.BaseURL + "/users/users", filters, { headers })
-        .subscribe(
-          response => {
-            resolve(response);
-          },
-          err => {
-            reject("err " + err);
-          }
-        );
+      this.http.post(environment.BaseURL +'/users/users',filters, {headers})
+      .subscribe(response =>{
+        console.log(response);
+        resolve(response);
+      },
+      (err)=> {
+        reject("err " +err);
+      });
     });
   }
-
-  //change web app user details from api DEPRICATED
   updateUser(user) {
     return new Promise((resolve, reject) => {
       this.http
@@ -62,4 +59,6 @@ export class UserService {
       );
     });
   }
+
+
 }
