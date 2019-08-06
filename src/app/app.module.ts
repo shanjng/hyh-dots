@@ -29,6 +29,7 @@ import { EditprofileComponent } from './components/editprofile/editprofile.compo
 
 import { CookieService } from 'ngx-cookie-service';
 import { MydashboardComponent } from './components/mydashboard/mydashboard.component';
+import { TopmatchesComponent } from './components/topmatches/topmatches.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { MydashboardComponent } from './components/mydashboard/mydashboard.compo
     AboutComponent,
     HelpComponent,
     FaqComponent,
-    MydashboardComponent],
+    MydashboardComponent,
+    TopmatchesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

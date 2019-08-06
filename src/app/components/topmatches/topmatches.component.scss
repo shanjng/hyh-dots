@@ -1,0 +1,68 @@
+body {
+    font-family: Comfortaa;
+    margin: 20px
+}
+
+
+.inline-block-child {
+    position: relative;
+    display: inline-block;
+}
+
+.center {
+    text-align: center;
+    align-content: center;
+}
+
+.card {
+    border: 2px solid #555555;
+    /* background-color: rgb(255, 244, 85); */
+    /* color: rgb(28, 158, 250); */
+    transition: 0.3s;
+    width: 100%;
+    position: relative;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+    position: relative;
+}
+
+.cardcol {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.contactButton {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    padding: 6px 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: Comfortaa;
+}
+
+.contactButton:hover {
+    background-color: #555555;
+    color: white;
+}
