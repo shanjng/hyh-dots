@@ -1,10 +1,10 @@
 export class NavBar {
-    public navItems: Array<any>=[
-    {name:"What We Do", path: "/about"},
-    {name:"Browse", path: "/browse"},
-    {name:"Login", path: "/login"},
-    {name:"Sign Up", path: "/register"}
-    ]
+  public navItems: Array<any> = [
+    { name: "What We Do", path: "/nav/about" },
+    { name: "Browse", path: "/nav/browse" },
+    { name: "Login", path: "/nav/login" },
+    { name: "Sign Up", path: "/nav/register" }
+  ];
 
   
     public loggedInNav: Array<any> =[

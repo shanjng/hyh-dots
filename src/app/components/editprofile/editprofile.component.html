@@ -1,0 +1,134 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="//fonts.googleapis.com/css?family=Comfortaa"
+  />
+</head>
+
+<div>
+  <div class="row">
+    <div class="biocol1 center">
+      <img
+        class="face"
+        src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+        alt="Avatar"
+        style="width:200px"
+      /><br />
+      <button type="button" class="contactButton">Message</button>
+    </div>
+    &nbsp;
+    <div class="biocol2">
+      <br />
+      <p></p>
+      <input
+        type="text1"
+        [(ngModel)]="user.username"
+        placeholder="@dotsusername"
+      /><br />
+      <p></p>
+      <input
+        type="text2"
+        [(ngModel)]="user.name"
+        placeholder="Full Name"
+      /><br />
+      <p></p>
+      <input
+        type="text1"
+        [(ngModel)]="user.industry"
+        placeholder="Industry tags"
+      />
+    </div>
+    <div class="biocol3 center">
+      <br />
+      <p></p>
+      <div class="parent">
+        <i class="fas fa-map-marker-alt inline-block-child"></i> &nbsp;
+        <input
+          type="text1"
+          [(ngModel)]="user.location"
+          placeholder="Location"
+        />
+      </div>
+      <div class="parent">
+        <!-- <div>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">VIEW ROLE AS<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li ng-click="setEthnicity('Actor')">Actor
+                                    <li ng-click="setRole('Director')">Director
+                </div> -->
+        <form class="inline-block-child">
+          <select>
+            <option value="ethnicity">Ethnicity</option>
+            <option value="js">African</option>
+            <option value="html">Caucasian</option>
+            <option value="css">East Asian</option>
+            <option value="css">Indian</option>
+            <option value="php">Middle Eastern</option>
+            <option value="js">Other</option>
+          </select>
+        </form>
+        <form class="inline-block-child">
+          <select>
+            <option value="gender">Gender</option>
+            <option value="html">Male</option>
+            <option value="css">Female</option>
+            <option value="php">Non-Binary</option>
+            <option value="js">Other</option>
+          </select>
+        </form>
+        <input
+          class="inline-block-child"
+          type="text1"
+          [(ngModel)]="user.age"
+          placeholder="Age"
+        />
+      </div>
+      <div class="parent">
+        <div class="inline-block-child">
+          <i class="fas fa-phone"></i>
+        </div>
+        <div class="inline-block-child">
+          <input
+            [(ngModel)]="user.phone"
+            type="text1"
+            name="name"
+            placeholder="Phone Number"
+          />
+        </div>
+        &nbsp;
+        <div class="inline-block-child">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="inline-block-child">
+          <input type="text1" [(ngModel)]="user.email" placeholder="Email" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="row2col1">
+      <h2>Bio</h2>
+      <input
+        type="text3"
+        [(ngModel)]="user.bio"
+        placeholder="Insert bio here"
+      />
+    </div>
+  </div>
+  <button
+    type="button"
+    class="contactButton"
+    style="justify-content: right"
+    (click)="edit()"
+  >
+    Finished
+  </button>
+</div>

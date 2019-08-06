@@ -1,34 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
-import {MatSidenavModule} from '@angular/material';
-import {NavService} from '../../services/nav.service';
-import {NavBar} from '../../nav-bar';import { resolve } from 'q';
-;
-
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { MatSidenavModule } from "@angular/material";
+import { NavService } from "../../services/nav.service";
+import { NavBar } from "../../nav-bar";
+import { resolve } from "q";
 @Component({
-  selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.scss']
+  selector: "app-nav-bar",
+  templateUrl: "./nav-bar.component.html",
+  styleUrls: ["./nav-bar.component.scss"]
 })
 export class NavBarComponent implements OnInit {
-  public navBar = new NavBar()
+  public navBar = new NavBar();
   nav: any;
 
-  constructor(
-    private router: Router,
-    private navbarService: NavService
-    ) { }
+  constructor(private router: Router, private navbarService: NavService) {}
 
   ngOnInit() {
+    this.nav = JSON.parse(localStorage.getItem("navBar"));
+  }
 
-    this.nav=JSON.parse(localStorage.getItem('navBar'));
-    // console.log(this.navBar.navItems)
-
-
-   }
-
-  navTo(nav){
-
+  navTo(nav) {
     this.router.navigate([nav.path]);
   }
 }

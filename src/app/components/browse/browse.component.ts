@@ -4,6 +4,7 @@ import { NavBar } from "../../nav-bar";
 import { UserService } from "../../services/user.service";
 import { TwitterUser } from "../../models/twitterUser.model";
 import { toBase64String } from '@angular/compiler/src/output/source_map';
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-browse",
@@ -13,21 +14,41 @@ import { toBase64String } from '@angular/compiler/src/output/source_map';
 export class BrowseComponent implements OnInit {
   public navBar = new NavBar();
   users: any;
-  filters :Array<any> =[];
+  filters: any[];
   selectedUser: TwitterUser;
-  onSelect(user: TwitterUser): void {
+
+  //grabs user from selected card and saves to local storage
+  async onSelect(user: TwitterUser): Promise<void> {
     this.selectedUser = user;
-    localStorage.setItem("TwitterUser",JSON.stringify(this.selectedUser.id));
+
+    await localStorage.setItem(
+      "twitterUser",
+      JSON.stringify(this.selectedUser)
+    );
+
+    await localStorage.setItem(
+      "twitterUser",
+      JSON.stringify(this.selectedUser)
+    );
+
+    this.router.navigate(["nav/dashboard"]);
   }
 
   constructor(
     private navService: NavService,
-    private userService: UserService
+    private userService: UserService,
+    private router: Router
   ) {
+    this.filters = [
+      {
+        topic: "",
+        count: 10000
+      }
+    ];
   }
 
   ngOnInit() {
-
+    //navigation
     if (localStorage.getItem("nav") === "true") {
       this.navService
         .reloadNav()
@@ -44,7 +65,7 @@ export class BrowseComponent implements OnInit {
         this.users = res;
       })
       .catch(err => {
-        console.log(err);
+        console.log("err fetching users from api for browse component: ", err);
       });
   }
   filterUsers(){

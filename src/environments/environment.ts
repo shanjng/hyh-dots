@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  BaseURL: 'http://localhost:5000'
+  // BaseURL: 'https://hyhapi.herokuapp.com'
+  BaseURL: "http://localhost:5000"
 };
 
 /*
