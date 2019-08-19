@@ -5,6 +5,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Running the Project on Your Local Machine
 Simply run `ng serve` via your terminal in the root directory of the project.
 
+Add the `--open` flag afterwards the previous command to have a window automatically oepn with the project.
+
 ## Quickstart for Deploying to Heroku
 
 Heroku CLI Method (preferred): 
