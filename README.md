@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
 
+## Running the Project on Your Local Machine
+Simply run `ng serve` via your terminal in the root directory of the project.
+
 ## Quickstart for Deploying to Heroku
 
 Heroku CLI Method (preferred): 
@@ -32,22 +35,3 @@ Switch to master branch with git checkout master:
 3. `git add .`
 4. `git commit -m "Comments"`
 5. `git push origin master`
-
-## Development server
-
-Run `ng serve --open` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-
-## Documentation
-
-Run `index.html` in the `Documentation` folder to view the documentation.
-
-To update documentation install compodoc by running `npm install -g @compodoc/compodoc` and create/update documentation by running `compodoc -p tsconfig.app.json -s` in your project.
